@@ -1,0 +1,80 @@
+
+<!--%= javascript_include_tag src="fancybox" %-->
+
+<!--<script>
+//    jQuery(document).ready(function() {
+//        alert('hello');
+//        jQuery("fancybox").fancybox();
+//    });
+</script>-->
+
+
+<!--
+<a href="#fancybox" rel="facebox">fancybox test</a>
+
+<div id="fancybox" >
+
+  <span style="font-weight: bold"> fancybox test Content Lines  </span>
+
+</div>
+
+<a class="fancybox">HELLO FANCY</a>
+
+-->
+
+<div class="user-home-menu">
+  <a href="#user_dashboard">Dashboard</a> |
+  <a href="#user_companies" class="fancybox">Company</a> |
+  <a href="#user_ads">Ads</a> |
+  <a href="#user_business_items">Business Listing</a> |
+  <a href="#user_jobs">Job Postings</a> |
+  <a href="#user_addresses">Address List</a>
+</div>
+
+<div id="user_dashboard" >
+  <span style="font-weight: bold"> Dashboard  </span>
+  <br/><br/>
+  This section will contain
+  <br/>summary of all entities.
+  <br/>Admin Notification
+  <br/>News / offers for this user
+  <br/>Feedback form for this user
+</div>
+
+<div id="user_companies" >
+  <span style="font-weight: bold">  My Companies  </span> | <%= link_to "Create New Company", new_company_path %>
+  <br/>
+  <br/>
+  <%= render :partial =>"companies/user_index"  %>
+</div>
+
+
+<div id="user_ads" >
+  <span style="font-weight: bold">  My Ads  </span> | <%= link_to "Create New Ad", new_ad_path %>
+  <br/>
+  <br/>
+  <%= render :partial =>"ads/user_index"  %>
+</div>
+
+<div id="user_business_items" >
+  <span style="font-weight: bold">  My Business Items  </span> | <%= link_to "Create Business Item", new_business_item_path %>
+  <br/>
+  <br/>
+  <%= render :partial =>"business_items/user_index"  %>
+</div>
+
+
+<div id="user_jobs" >
+  <span style="font-weight: bold">  My Jobs  </span> | <%= link_to "Create New job", new_job_path %>
+  <br/>
+  <br/>
+  <%= render :partial =>"jobs/user_index"  %>
+</div>
+
+
+<div id="user_addresses" >
+  <span style="font-weight: bold">  My Addresses  </span> | <%= link_to "Create New Addresses", new_address_path %>
+  <br/>
+  <br/>
+  <%= render :partial =>"addresses/user_index"  %>
+</div>

@@ -66,7 +66,7 @@ Bizlab::Application.routes.draw do
 
   get "info/help"
 
-  get "info/users_home"
+  get "info/user_account_page"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

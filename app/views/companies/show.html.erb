@@ -61,7 +61,7 @@
 
 <% if user_signed_in? && @company.user_id == current_user.id %>
     <%= link_to 'Edit', edit_company_path(@company) %> |
-    <%= link_to "Back to My Account", "/info/user_home" %>
+    <%= link_to "Back to My Account", "/info/user_account_page" %>
 <% end %>
 
 

@@ -1,2 +1,4 @@
-<h1>Info#home</h1>
-<p>Find me in app/views/info/home.html.erb</p>
+<div class="row-fluid">
+  <%= render :partial => "ads/ad_slider_dynamic", :locals => {:adcount => "4"} %>
+  <%= render :partial => "ads/ad_slider_dynamic_Carousel", :locals => {:adcount => "4"} %>
+</div>

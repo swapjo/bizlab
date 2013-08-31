@@ -1,0 +1,31 @@
+<% if user_signed_in? %>
+
+    <% if current_user.role_id != nil  %>
+
+        <h2> <%= current_user.role.name %> User Home Page </h2>
+        <br/>
+        <% if current_user.role.name == Role.find_by_name("Business Provider").name  %>
+
+            <%= render :partial=> "company_user" %>
+
+        <% elsif current_user.role.name == Role.find_by_name("Consumer").name  %>
+
+            <%= render :partial=> "normal_user" %>
+
+        <% end %>
+
+    <% else %>
+        <h2>
+          <%= link_to "Confirm user role first", edit_user_registration_path %>
+        </h2>
+    <% end %>
+
+<% else %>
+
+    <h2>
+
+      <%= link_to "Login", new_user_session_path %> | <%= link_to "Register", new_user_registration_path %>
+
+    </h2>
+
+<% end %>

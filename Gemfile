@@ -7,6 +7,8 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 gem 'devise'
+gem 'will_paginate'
+gem 'kaminari'
 
 gem 'carrierwave'
 

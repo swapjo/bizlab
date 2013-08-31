@@ -11,6 +11,14 @@ class InfoController < ApplicationController
   def help
   end
 
-  def users_home
+  def user_account_page
   end
+
+  def no_company_exists
+  end
+
+  def business_page_1
+
+  end
+
 end
