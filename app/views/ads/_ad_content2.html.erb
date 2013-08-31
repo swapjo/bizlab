@@ -1,0 +1,26 @@
+  <li class="dealBox">
+    <figure>
+      <%=image_tag(ad.image.to_s, :height => '157', :width => '217') %>
+      <!-- <span class="hotDeal"></span>       -->
+        <span class="catbox">
+          <span class="bur">
+            <%= link_to ad.ad_category.name, AdCategory.find(ad.ad_category_id || 0) %>
+          </span>
+        </span>
+      <figcaption>
+        <a href="<%=@ad %>" onclick="_gaq.push(['_trackEvent', 'AllDealshome_new', '<%= truncate(ad.description, :length => 50) %>','deallink']);"><%=ad.title %>></a>
+        <address id="addrID_<%=ad.id %>" class="addr">
+         <%=ad.address %>
+        </address>
+      </figcaption>
+      <ul class="buybox">
+        <li class="price"><%=ad.price%></li>
+        <a onclick="generticpopup('http://timesdeal.com/justsaved.php','630','16672');_gaq.push(['_trackEvent','AllDealshome_new', 'ad_id','viewofferlink']);" id="a_<%=ad.id %>" class="btnBuy1" href="javascript:void(0)">Buy Now</a>
+      </ul>
+    </figure>
+
+    <span id="overlay_<%=ad.id %>" class="overlay"></span>
+	<span id="overDiv_<%=ad.id %>" class="overDiv">
+         <%= link_to truncate(ad.description, :length => 50), ad %>
+    </span>
+  </li>

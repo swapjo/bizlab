@@ -1,25 +1,27 @@
 <%= form_for(@ad_position) do |f| %>
-  <% if @ad_position.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@ad_position.errors.count, "error") %> prohibited this ad_position from being saved:</h2>
+    <% if @ad_position.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@ad_position.errors.count, "error") %> prohibited this ad_position from being saved:</h2>
 
-      <ul>
-      <% @ad_position.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @ad_position.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <br/>
+      <%= f.text_field :name %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :ispublished %><br />
-    <%= f.check_box :ispublished %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :ispublished %>
+      <br/>
+      <%= f.check_box :ispublished %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

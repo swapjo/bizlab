@@ -1,0 +1,19 @@
+<div id="ads">
+  <% @ads = Ad.search(params[:search])
+     @ads = @ads.where("user_id = ? ", current_user.id)
+     if params.has_key?(:ad_category_id) && params[:ad_category_id] != ''
+       @ads = @ads.where(' ad_category_id = ?', "#{params[:ad_category_id]}")
+     end
+     if params.has_key?(:company_id) && params[:company_id] != ''
+       @ads = @ads.where(' company_id = ?', "#{params[:company_id]}")
+     end
+     if params.has_key?(:price_from) && params[:price_from] != ''
+       @ads = @ads.where(' price >= ?', "#{params[:price_from]}")
+     end
+     if params.has_key?(:price_to) && params[:price_to] != ''
+       @ads = @ads.where(' price <= ?', "#{params[:price_to]}")
+     end
+  %>
+  <% @ads = @ads.paginate(:per_page => 8, :page => params[:page]) %>
+  <%= render :partial => 'ads/ads' , :locals => {:index_scope => "creator" , :ads => @ads }%>
+</div>

@@ -1,0 +1,26 @@
+<% @bookmark_jobs=BookmarkJob.find_all_by_user_id(current_user.id)
+   @bookmark_jobs.each do |bookmark_job|
+     @job = Job.find(bookmark_job.job_id)
+     unless @job.nil?
+%>
+        <div class="active_deals">
+
+          <% begin
+               if index_scope == "creator" && user_signed_in?
+                 puts "job index scope #{index_scope}  ,  #{current_user.id}"
+               else
+                 puts "job index scope is chosen PUBLIC"
+          %>
+                  <%= render :partial =>"jobs/job_search"%>
+              <% end
+                 rescue NameError
+                   puts "job index scope is chosen PUBLIC"
+                 end
+              %>
+
+          <%= render :partial =>"jobs/job_content", :locals => {:job => @job} %>
+    <% end %>
+<% end %>
+</div>
+
+<div class="cleared"></div>

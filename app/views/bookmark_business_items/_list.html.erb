@@ -1,0 +1,26 @@
+<% @bookmark_business_items=BookmarkBusinessItem.find_all_by_user_id(current_user.id)
+   @bookmark_business_items.each do |bookmark_business_item|
+     @business_item = BusinessItem.find(bookmark_business_item.business_item_id)
+     unless @business_item.nil?
+%>
+        <div class="active_deals">
+
+          <% begin
+               if index_scope == "creator" && user_signed_in?
+                 puts "business_item index scope #{index_scope}  ,  #{current_user.id}"
+               else
+                 puts "business_item index scope is chosen PUBLIC"
+          %>
+                  <%= render :partial =>"business_items/business_item_search"%>
+              <% end
+                 rescue NameError
+                   puts "business_item index scope is chosen PUBLIC"
+                 end
+              %>
+
+          <%= render :partial =>"business_items/business_item_contents", :locals => {:business_item => @business_item} %>
+    <% end %>
+<% end %>
+</div>
+
+<div class="cleared"></div>

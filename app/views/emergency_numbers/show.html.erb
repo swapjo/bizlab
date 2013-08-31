@@ -4,7 +4,13 @@
   <b>Name:</b>
   <%= @emergency_number.name %>
 </p>
-
+<p>
+  <% if @emergency_number.image.to_s != ''  %>
+      <%=image_tag(@emergency_number.image.to_s, :height => '157', :width => '217') %>
+  <% else %>
+      <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+  <% end %>
+</p>
 <p>
   <b>Value:</b>
   <%= @emergency_number.value %>
@@ -18,11 +24,6 @@
 <p>
   <b>Ispublished:</b>
   <%= @emergency_number.ispublished %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @emergency_number.image %>
 </p>
 
 

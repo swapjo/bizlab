@@ -1,0 +1,37 @@
+<div style="border: 1px solid #7FBDF8;float: left;margin: 10px 6px;padding: 5px;width: 470px;font-size:12px;"
+     xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<div style="background-color: #D8D8D8;padding:3px;">
+  <b><%= business_item.title %></b>
+  <br/><span style="font-size:11px;"><%= business_item.business_item_category.name %></span>
+</div>
+
+<div style="background-color: #EDF6FF;padding:6px 3px;height:27px;">
+  <%= business_item.address && business_item.address.address_brief %>
+</div>
+  <br/>
+  <table >
+  <tr>
+    <td width=50% style="padding-right:10px;height:90px">
+      <b>About</b>
+      <br/>
+      <br/>Company:<%= business_item.shopping_mall && business_item.company.name %>
+      <br/>Located at :<%= business_item.shopping_mall && business_item.shopping_mall.name %>
+    </td>
+    <td width=50% style="padding-left: 10px;border-left:2px solid #7FBDF8;">
+      <b>Contact</b>
+      <br/>
+      <br/>Name : <%= business_item.address && business_item.address.contact_name %>
+      <br/>Phone: <%= business_item.address && business_item.address.phone %>
+      <br/>Fax: <%= business_item.address && business_item.address.fax %>
+      <br/>Email: <%= business_item.address && business_item.address.email %>
+      <br/>
+    </td>
+  </tr>
+</table>
+  <span style="float:right"><%= link_to "View more", business_item %></span>
+</div>
+
+
+
+
+

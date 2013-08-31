@@ -1,0 +1,85 @@
+<% width=450
+   height = (width*0.66).round(0) %>
+<div class="dealio" >
+
+  <table width=100% >
+    <tr>
+      <td>
+        <p>
+          <b>Address line one:</b>
+          <%= @address.address_line_one %>
+        </p>
+
+        <p>
+        <b>Address line two:</b>
+        <%= @address.address_line_two %>
+      </p>
+
+        <p>
+        <b>Street:</b>
+        <%= @address.street %>
+      </p>
+
+        <p>
+        <b>City:</b>
+        <%= @address.city %>
+      </p>
+        <p>
+          <b>Postal code:</b>
+          <%= @address.postal_code %>
+        </p>
+      <p>
+        <b>Country:</b>
+        <%= @address.country %>
+      </p>
+
+      <p>
+        <b>Latitude:</b>
+        <%= @address.latitude %>
+      </p>
+
+      <p>
+        <b>Longitude:</b>
+        <%= @address.longitude %>
+      </p>
+
+      <p>
+        <b>Website:</b>
+        <%= @address.website %>
+      </p>
+
+      <p>
+        <b>Google map : <%=@address.address_brief %></b>
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=#{width}x#{height}&scale=1&sensor=false&zoom=12&feature=all&markers=#{shopping_mall.address.latitude}%2C#{shopping_mall.address.longitude}" %>
+
+        <!--%= gmaps4rails(@json) %-->
+
+      </p>
+
+      <p>
+        <b>Chat code:</b>
+        <%= @address.chat_code %>
+      </p>
+
+        <p>
+          <b>Contact name:</b> <%= @address.contact_name %> <br/>
+          <b>Email:</b> <%= @address.email %>               <br/>
+          <b>Phone:</b>          <%= @address.phone %>           <br/>
+          <b>Fax:</b>          <%= @address.fax %>                    <br/>
+        </p>
+
+      </td>
+    </tr>
+    <% if user_signed_in? && address.user_id == current_user.id %>
+    <tr>
+
+    <td><%= link_to 'Edit', edit_address_path(address) %> |
+        <%= link_to 'Destroy', address, method: :delete, data: {confirm: 'Are you sure?'} %> |
+        <%= link_to "Back to My Account", "/info/user_home" %>
+    </td>
+
+    </tr>
+    <% end %>
+  </table>
+
+</div>

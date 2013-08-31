@@ -1,0 +1,107 @@
+<link rel="stylesheet" type="text/css" href="/stylesheet/slideshow-style.css"/>
+<script type="text/javascript" src="/javascript/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery-ui-1.7.2.custom.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#featured").tabs({fx: [
+            {opacity: "toggle", duration: 'slow'},
+            {opacity: "toggle", duration: 'normal'}
+        ],
+            show: function (event, ui) {
+                $('#featured .ui-tabs-panel .info').hide();
+                var infoheight = $('.info', ui.panel).height();
+                $('.info', ui.panel).css('height', '0px').animate({ 'height': infoheight }, 500);
+            }
+        }).tabs("rotate", 5000, true);
+        $('#featured').hover(
+                function () {
+                    $('#featured').tabs('rotate', 0, true);
+                },
+                function () {
+                    $('#featured').tabs('rotate', 5000, true);
+                }
+        );
+        $('#featured .ui-tabs-panel a.hideshow').click(function () {
+            if ($(this).text() == 'Hide') {
+                $(this).parent('.info').animate({ 'height': '0px' }, 500);
+                $(this).text('Show');
+            }
+            else {
+                $(this).parent('.info').animate({ 'height': '70px' }, 500);
+                $(this).text('Hide');
+            }
+            return false;
+        });
+    });
+</script>
+
+
+
+<div id="featured">
+
+
+
+
+  <% @ad_categories = AdCategory.all(:select => :id).collect(&:id)
+     @loopvar = 0
+     #puts "ad_categories ==> #{@ad_categories}"
+     @ad_categories.each do |x|
+       @loopvar+=1
+       #puts "ad_category ==> #{x}"
+       @ad = Ad.find_all_by_ad_category_id(x).first
+       unless @ad.nil?
+  %>
+          <!-- Content Display-->
+          <div id="fragment-<%=@loopvar%>" class="ui-tabs-panel  ui-tabs-hide" style="">
+            <% if @ad.image.to_s != ''  %>
+                <%=image_tag(@ad.image.to_s, :height => '100%', :width => '100%')%>
+            <% else %>
+                <%=image_tag("/images/dummy.jpeg", :height => '257') %>
+            <% end %>
+            <div class="info">
+              <a class="hideshow" href="#">Hide</a>
+              <h2><%= link_to @ad.title, @ad %></h2>
+              <!--<p class="desc">&lt;!&ndash;%= link_to truncate(@ad.description, :length => 100), @ad%&ndash;&gt;</p>-->
+              <p class="links">
+                <a class="art-button" href="#">More</a> <a class="art-button" href="#">Print</a>
+                <a class="art-button" href="#">Email</a> <a class="art-button" href="#">Save</a>
+                <a class="art-button" href="#">Share</a>
+              </p>
+            </div>
+          </div>
+      <% end %>
+  <% end %>     <br/>
+  <ul class="ui-tabs-nav">
+    <% @ad_categories = AdCategory.all(:select => :id).collect(&:id)
+       @loopvar = 0
+       #puts "ad_categories ==> #{@ad_categories}"
+       @ad_categories.each do |x|
+         @loopvar+=1
+         #puts "ad_category ==> #{x}"
+         @ad = Ad.find_all_by_ad_category_id(x).first
+         unless @ad.nil?
+    %>
+            <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-<%=@loopvar%>">
+
+              <a href="#fragment-<%=@loopvar%>">
+                <% if @ad.image.to_s != ''  %>
+                    <%=image_tag(@ad.image.to_s)%>
+                <% else %>
+                    <%=image_tag("/images/dummy.jpeg", :height => '80') %>
+                <% end %>
+                <span>
+                  <%= @ad.title %>
+                </span>
+              </a>
+            </li>
+        <% end %>
+    <% end %>
+    <!--li class="ui-tabs-nav-item" id="nav-fragment-7"><a href="#fragment-7"><img src="/images/home-slideshow/image2-small.jpg" alt="" /><span>20 Beautiful Long Exposure Photographs</span></a></li-->
+  </ul>
+</div>
+
+
+
+<h2>Click for more business opportunities for business provider</h2>
+</div>

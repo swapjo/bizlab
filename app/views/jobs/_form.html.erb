@@ -1,65 +1,63 @@
 <%= form_for(@job) do |f| %>
-  <% if @job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+    <% if @job.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
 
-      <ul>
-      <% @job.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @job.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %>
+      <br/>
+      <%= f.text_field :title %>
     </div>
-  <% end %>
+    <div class="field">
+      <%= f.label :description %>
+      <br/>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :vacancy_count %>
+      <br/>
+      <%= f.number_field :vacancy_count %>
+    </div>
+    <div class="field">
+      <%= f.label :company_id %>
+      <br/>
+      <%=collection_select(:job, :company_id, Company.user_related(current_user.id), :id, :name   ) %>   | <%= link_to "Add another company", new_company_path %>
+    </div>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :vacancy_count %><br />
-    <%= f.number_field :vacancy_count %>
-  </div>
-  <div class="field">
-    <%= f.label :company_id %><br />
-    <%= f.number_field :company_id %>
-  </div>
-  <div class="field">
-    <%= f.label :qualification %><br />
-    <%= f.text_area :qualification %>
-  </div>
-  <div class="field">
-    <%= f.label :job_categiory_id %><br />
-    <%= f.number_field :job_categiory_id %>
-  </div>
-  <div class="field">
-    <%= f.label :meeting_address %><br />
-    <%= f.text_area :meeting_address %>
-  </div>
-  <div class="field">
-    <%= f.label :expiry_date %><br />
-    <%= f.date_select :expiry_date %>
-  </div>
-  <div class="field">
-    <%= f.label :ispublished %><br />
-    <%= f.check_box :ispublished %>
-  </div>
-  <div class="field">
-    <%= f.label :isapproved %><br />
-    <%= f.check_box :isapproved %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :qualification %>
+      <br/>
+      <%= f.text_area :qualification %>
+    </div>
+    <div class="field">
+      <%= f.label :job_categiory_id %>
+      <br/>
+      <%=collection_select(:ad, :ad_category_id, JobCategory.all, :id, :name  ) %> | <%= link_to "Add New Job Category", new_job_category_path %>
+    </div>
+    <div class="field">
+      <%= f.label :meeting_address %>
+      <br/>
+      <%= f.text_area :meeting_address %>
+    </div>
+    <div class="field">
+      <%= f.label :expiry_date %>
+      <br/>
+      <%= f.date_select :expiry_date %>
+    </div>
+    <div class="field">
+      <%= f.label :image %>
+      <br/>
+      <%= f.file_field :image %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

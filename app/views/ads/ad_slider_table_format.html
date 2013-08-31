@@ -1,0 +1,41 @@
+<!-- kept as backup reference
+tables are dicourraged for mobile screens-->
+<table  border="1" style="font-size: 12px; border-collapse:collapse;width:100%; background:#eaeaea">
+        <tr>
+          <td><%=@ad.title%> <img src="/images/ethnic_logo.bmp" alt="Ethnic Match"/></td>
+          <td><%=@ad.address.address_brief%> </td>
+        </tr>
+        <tr>
+          <td style="background:#eaeaea">
+            <%=link_to "In The Mall", @ad.shopping_mall %> -
+            <%=link_to "Order Online", @ad %> -
+            <%=link_to "We Deliver", @ad %> -
+          </td>
+          <td style="background:#eaeaea"><%=@ad.address.contact_info%> </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <% if @ad.image.to_s != ''  %>
+                <%=image_tag(@ad.image.to_s, :height => '100%', :width => '100%')%>
+            <% else %>
+                <%=image_tag("/images/dummy.jpeg", :height => '257') %>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h2><%= link_to @ad.title, @ad %></h2>
+            <!--<p class="desc">&lt;!&ndash;%= link_to truncate(@ad.description, :length => 100), @ad%&ndash;&gt;</p>-->
+
+          </td>
+        </tr>
+        <tr>
+           <td colspan="2">
+             <p class="links">
+               <a class="art-button" href="#">More</a> <a class="art-button" href="#">Print</a>
+               <a class="art-button" href="#">Email</a> <a class="art-button" href="#">Save</a>
+               <a class="art-button" href="#">Share</a>
+             </p>
+           </td>
+        </tr>
+      </table>

@@ -4,32 +4,62 @@
   <b>Name:</b>
   <%= @shopping_mall.name %>
 </p>
-
+<p>
+  <b>Mall type:</b>
+  <%= @shopping_mall.mall_type && @shopping_mall.mall_type.name %>
+</p>
+<p>
+  <% if @shopping_mall.image.to_s != ''  %>
+      <%=image_tag(@shopping_mall.image.to_s, :height => '157', :width => '217') %>
+  <% else %>
+      <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+  <% end %>
+</p>
 <p>
   <b>Description:</b>
   <%= @shopping_mall.description %>
 </p>
 
-<p>
-  <b>Mall type:</b>
-  <%= @shopping_mall.mall_type_id %>
-</p>
+<div class="shopping_mall_ads">
+  <% @ads = Ad.where(' shopping_mall_id = ?', "#{@shopping_mall.id}").paginate(:per_page => 12, :page => params[:page])%>
+  <%= render :partial =>"ads/ads", :locals => {:ads=> @ads} %>
+</div>
 
-<p>
-  <b>Ispublished:</b>
-  <%= @shopping_mall.ispublished %>
-</p>
+<div class="shopping_mall_business_items">
+  <% @business_items = BusinessItem.where(' shopping_mall_id = ?', "#{@shopping_mall.id}").paginate(:per_page => 12, :page => params[:page])%>
+  <%= render :partial =>"business_items/business_items", :locals => {:business_items => @business_items } %>
+</div>
 
-<p>
-  <b>Image:</b>
-  <%= @shopping_mall.image %>
-</p>
+<% if @shopping_mall.mall_type_id == 1 %>
 
-<p>
-  <b>Address:</b>
-  <%= @shopping_mall.address_id %>
-</p>
+    <div class="shopping_mall_business_categories">
+      <h2> Business Categories available with this mall</h2>
+
+      <%
+         @business_items = BusinessItem.where(' shopping_mall_id = ?', "#{@shopping_mall.id}")
+         @business_item_categories = BusinessItemCategory.where(" id IN (#{@business_items.collect{|a|[a.business_item_category_id]}.join(',')})")
+      %>
+
+      <% @business_item_categories.each do |business_item_category| %>
+          <div class="business_item_categories">
+            <%= render :partial =>"business_item_categories/business_item_category_2", :locals => {:business_item_category => business_item_category } %>
+            <div class="clear: both"></div>
+          </div>
+      <% end %>
+    </div>
+
+    <div class="shopping_mall_ad_categories">
+      <h2> Ad Categories available with this mall</h2>
+      <%
+         @ads = Ad.where(' shopping_mall_id = ?', "#{@shopping_mall.id}")
+         @ad_categories = AdCategory.where(" id IN (#{@ads.collect{|a|[a.ad_category_id]}.join(',')})") %>
+      <% @ad_categories.each do |ad_category| %>
+          <div class="ad_category">
+            <%= render :partial =>"ad_categories/ad_category_content", :locals => {:ad_category => ad_category} %>
+            <div class="clear: both"></div>
+          </div>
+      <% end %>
+    </div>
 
 
-<%= link_to 'Edit', edit_shopping_mall_path(@shopping_mall) %> |
-<%= link_to 'Back', shopping_malls_path %>
+<% end %>

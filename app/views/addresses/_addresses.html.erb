@@ -1,0 +1,29 @@
+
+<%= will_paginate @addresses %>
+
+<div class="active_deals">
+
+  <% begin
+       if index_scope == "creator" && user_signed_in?
+         puts "addresses index scope #{index_scope}  ,  #{current_user.id}"
+       else
+         puts "addresses index scope is chosen PUBLIC"
+  %>
+          <%= render :partial =>"ads/ad_search"%>
+      <% end
+         rescue NameError
+           puts "addresses index scope is chosen PUBLIC"
+         end
+      %>
+
+  <% @addresses.each do |address|  %>
+
+      <%= render :partial =>"addresses/address_content", :locals => {:address => address} %>
+
+  <% end %>
+
+</div>
+
+<div class="cleared"></div>
+<%= will_paginate @addresses %>
+

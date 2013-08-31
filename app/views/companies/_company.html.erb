@@ -1,0 +1,22 @@
+<div class="company_list">
+  <span class="name"><a href="#"><%= company.name %></a></span>
+  <div class="info"><%= company.description %></div>
+  <div>
+     <span  class="about"><a href="/companies/show/<%= company.id %>"><img src="../images/get_info.png">About</a></span>
+     <span  class="offers"><a href="/ads/?company_id=<%= company.id %>"><img src="../images/offer.png">Offers</a></span>
+     <span  class="business"><a href="/business_items/?company_id=<%= company.id %>"><img src="../images/directory.png">Business Listing</a></span>
+ </div>
+  <div class="contact">
+    <p class="address"><b>Address</b>:<%= company.info %></p>
+    <div class="phone"><img src="../images/phone.png"><b>Phone</b>:<%= company.phone %></div>
+    <div class="fax"><img src="../images/fax.png"><b>Fax</b>:<%= company.fax %></div>
+    <div class="email"><img src="../images/email.png"><b>Email</b>:<%= company.email %></div>
+  </div>
+  <div>
+    <% if user_signed_in? && company.user_id == current_user.id %>
+        <%= link_to 'Edit', edit_company_path(company) %>
+        <%= link_to 'Destroy', company, method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% end %>
+  </div>
+</div>
+

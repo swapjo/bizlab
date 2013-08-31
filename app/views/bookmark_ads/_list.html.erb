@@ -1,0 +1,26 @@
+<% @bookmark_ads=BookmarkAd.find_all_by_user_id(current_user.id)
+   @bookmark_ads.each do |bookmark_ad|
+     @ad = Ad.find(bookmark_ad.ad_id)
+     unless @ad.nil?
+%>
+        <div class="active_deals">
+
+          <% begin
+               if index_scope == "creator" && user_signed_in?
+                 puts "ad index scope #{index_scope}  ,  #{current_user.id}"
+               else
+                 puts "ad index scope is chosen PUBLIC"
+          %>
+                  <%= render :partial =>"ads/ad_search"%>
+              <% end
+                 rescue NameError
+                   puts "ad index scope is chosen PUBLIC"
+                 end
+              %>
+
+          <%= render :partial => "ads/ad_tiny", :locals => {:ad => @ad} %>
+    <% end %>
+<% end %>
+</div>
+
+<div class="cleared"></div>

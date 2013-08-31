@@ -1,0 +1,29 @@
+<div id="featured-horizontal">
+  <!-- Horizontal slider -->
+          <span class="span-tabs-nav-horizontal">
+            <% @ad_categories = AdCategory.all(:select => :id).collect(&:id)
+               @loopvar = 0
+               #puts "ad_categories ==> #{@ad_categories}"
+               @ad_categories.each do |x|
+                 @loopvar+=1
+                 #puts "ad_category ==> #{x}"
+                 @ad = Ad.find_all_by_ad_category_id(x).first
+                 unless @ad.nil?
+            %>
+                    <span class="span-tabs-nav-item span-tabs-selected" id="nav-fragment-<%=@loopvar%>">
+                      <a href="#fragment-<%=@loopvar%>">
+                        <% if @ad.image.to_s != ''  %>
+                            <%=image_tag(@ad.image.to_s)%>
+                        <% else %>
+                            <%=image_tag("/images/dummy.jpeg") %>
+                        <% end %>
+                        <span><%= @ad.title %></span>
+                      </a>
+                    </span>
+                <% end %>
+            <% end %>
+            <!--li class="ui-tabs-nav-item" id="nav-fragment-7"><a href="#fragment-7"><img src="/images/home-slideshow/image2-small.jpg" alt="" /><span>20 Beautiful Long Exposure Photographs</span></a></li-->
+          </span>
+
+  <!-- Horizontal slider end-->
+</div>

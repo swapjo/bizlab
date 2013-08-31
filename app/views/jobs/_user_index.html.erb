@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Vacancy count</th>
+    <th>Company</th>
+    <th>Qualification</th>
+    <th>Job categiory</th>
+    <th>Meeting address</th>
+    <th>Expiry date</th>
+    <th>Ispublished</th>
+    <th>Isapproved</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @jobs = Job.where("user_id = ? ", current_user.id).paginate(:per_page => 8, :page => params[:page]) %>
+
+
+  <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.description %></td>
+        <td><%= job.vacancy_count %></td>
+        <td><%= job.company_id %></td>
+        <td><%= job.qualification %></td>
+        <td><%= job.job_categiory_id %></td>
+        <td><%= job.meeting_address %></td>
+        <td><%= job.expiry_date %></td>
+        <td><%= job.ispublished %></td>
+        <td><%= job.isapproved %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+
+<%= link_to 'New Job', new_job_path %>

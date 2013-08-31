@@ -1,0 +1,9 @@
+<h3>Related ads</h3>
+<%@ads = Ad.search_similar_ads(main_ad).offset(rand(Ad.count)).limit(3).paginate(:per_page => 4, :page => params[:page]) %>
+<%= will_paginate @ads %>
+
+<% @ads.each do |ad| %>
+    <%= render :partial => "ads/ad_content" , :locals => { :display_mode => "summary", :ad => ad}  %>
+<% end %>
+
+<%= will_paginate @ads %>

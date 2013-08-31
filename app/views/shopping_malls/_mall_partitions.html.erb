@@ -1,0 +1,48 @@
+<div class="row-fluid">
+  <div style="text-align:center;border-width: 1">
+    <h3 style="">View The Malls</h3>
+    <% if params[:city] %>
+        In City  <%=params[:city]%>
+    <% end %>
+  </div>
+  <div style="font-size: 10px">
+    <span>
+      ALL MALLS (<%=@shopping_malls.count %>)
+    </span>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span3">
+    <h3>
+      MAJOR MALLS (<%=@shopping_malls.where(" mall_type_id=1").count %>)
+    </h3>
+  </div>
+  <div class="span6" style="text-align: center; ">
+    <div class="span3 offset2">
+      DISTANCE TO MALLS
+    </div>
+    <%= render :partial => "shopping_malls/mall_search" %>
+  </div>
+
+  <div class="span3">
+    <h3>PLAZA MALLS (<%=@shopping_malls.where(" mall_type_id=2").count %>) </h3>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span6">
+      <!--MAJOR MALLS-->
+      <%     @shopping_malls.each do |shopping_mall|
+             if shopping_mall.mall_type_id == 1 %>
+              <%= render :partial => "shopping_malls/shopping_mall_tiny", :locals => {:shopping_mall => shopping_mall} %>
+          <% end %>
+      <% end %>
+  </div>
+  <div class="span6">
+      <!--PLAZA MALLS -->
+      <%     @shopping_malls.each do |shopping_mall|
+        if shopping_mall.mall_type_id == 2 %>
+              <%= render :partial => "shopping_malls/shopping_mall_tiny", :locals => {:shopping_mall => shopping_mall} %>
+          <% end %>
+      <% end %>
+  </div>
+</div>

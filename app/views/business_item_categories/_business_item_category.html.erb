@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @business_item_category.name %>
+</p>
+
+<p>
+  <b>Introtext:</b>
+  <%= @business_item_category.introtext %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @business_item_category.description %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @business_item_category.ispublished %>
+</p>
+
+
+<div class="business_item_categories_business_items">
+  <% @business_items = BusinessItem.where(' business_item_category_id = ?', "#{@business_item_category.id}").paginate(:per_page => 6, :page => params[:page])%>
+  <%= render :partial =>"business_items/business_items", :locals => {:business_items => @business_items } %>
+
+</div>
+
+<div class="business_item_parent_categories">
+  <% if @business_item_category.get_parent_category.count > 0 then %>
+      <h3>Parent Category: </h3>
+      <% @business_item_category.get_parent_category.each do |parent_category| %>
+          <b><%=link_to(parent_category && parent_category.name, parent_category)%> </b>
+      <% end %>
+      <br/>
+      <% end %>
+</div>
+
+<% if @business_item_category.get_all_child_categories.count > 0 then %>
+    <h3>Sub Categories :</h3>
+    <div class="business_item_sub_categories">
+      <% @business_item_category.get_child_categories.each do |subcategory| %>
+          <b><%=link_to(subcategory && subcategory.name, subcategory)%> </b>
+      <% end%>
+      <br/>
+    </div>
+<% end %>
+
+<%= link_to 'Edit', edit_business_item_category_path(@business_item_category) %> |
+<%= link_to 'Back', business_item_categories_path %>

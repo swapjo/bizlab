@@ -1,0 +1,28 @@
+<%= will_paginate @business_items %>
+
+<div class="active_deals">
+
+  <% begin
+       if index_scope == "creator" && user_signed_in?
+         puts "ad index scope #{index_scope}  ,  #{current_user.id}"
+       else
+         puts "ad index scope is chosen PUBLIC"
+  %>
+          <%= render :partial =>"ads/ad_search"%>
+      <% end
+         rescue NameError
+           puts "ad index scope is chosen PUBLIC"
+         end
+      %>
+
+  <% @business_items.each do |business_item|  %>
+
+      <%= render :partial => "business_items/business_item_contents", :locals => {:business_item => business_item} %>
+
+  <% end %>
+
+</div>
+
+<div class="cleared"></div>
+<%= will_paginate @business_items %>
+

@@ -1,0 +1,86 @@
+<%if display_mode == "summary"  %>
+    <div class="ad_summary">
+        <div class="title">
+              <%= link_to ad.title, ad %>
+        </div>
+        <div class="image">
+          <% if ad.image.to_s != ''  %>
+              <%=image_tag(ad.image.to_s, :height => '157', :width => '217') %>
+          <% else %>
+              <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+          <% end %>
+        </div>
+        <div class="description">
+          <%= truncate(ad.description, :length => 30) %><br/><%= link_to '... (more)', ad %>
+        </div>
+        <div class="price">
+          Price : <%= (ad.price.nil? || ad.price.zero?) ? "Free !" : number_to_currency(ad.price) %>
+        </div>
+    </div>
+<% elsif display_mode == "tiny"  %>
+    <div class="ad_tiny">
+      <% if ad.image.to_s != ''  %>
+        <%=image_tag(ad.image.to_s, :height => '80')%>
+      <% else %>
+          <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+      <% end %>
+      <%= link_to ad.title, ad %>
+      <span class="description">
+        <%= truncate(ad.description, :length => 30) %><br/><%= link_to '... (more)', ad %>
+      </span>
+      <span class="price">
+        Price : <%= (ad.price.nil? || ad.price.zero?) ? "Free !" : number_to_currency(ad.price) %>
+      </span>
+    </div>
+<% elsif display_mode == "detailed"  %>
+    <div class="ad_detailed">
+        <div class="title">
+          <%= @ad.title %>
+        </div>
+        <div class="big_image">
+          <% if ad.image.to_s != ''  %>
+              <%=image_tag(ad.image.to_s, :height => '350') %>
+          <% else %>
+              <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+          <% end %>
+        </div>
+        <div class="description">
+          <%= @ad.description %>
+        </div>
+        <div class="price">
+              <b>Price: </b><%= (@ad.price.nil? || @ad.price.zero?) ? "Free !" : number_to_currency(@ad.price) %>
+        </div>
+          <div class="address">
+            <b>Address:</b>
+            <%= @ad.address_id %>
+          </div>
+          <div class="company">
+            <b>Company:</b>
+            <%= link_to @ad.company.name, Company.find(@ad.company_id || 0) %>
+            <br/>
+            <%= link_to " ( #{pluralize(Ad.find_all_by_company_id(@ad.company.id).count, 'Ad')} )  for this company", ads_path(:company_id => @ad.company.id) %>
+          </div>
+          <div class="shopping_mall">
+            <b>Shopping mall:</b>
+            <%= link_to @ad.shopping_mall.name, ads_path(:shopping_mall_id => @ad.shopping_mall.id) %>
+            <br/>
+            <%= link_to " ( #{pluralize(Ad.find_all_by_shopping_mall_id(@ad.shopping_mall.id).count, 'Ad')} )  for this mall", ads_path(:shopping_mall_id => @ad.shopping_mall.id) %>
+          </div>
+          <div class="category">
+            <b>Category:</b>
+            <%= link_to @ad.ad_category.name, ads_path(:ad_category_id => @ad.ad_category.id) %>
+            <br/>
+            <%= link_to " ( #{pluralize(Ad.find_all_by_ad_category_id(@ad.ad_category.id).count, 'Ad')} ) for this category" , ads_path(:ad_category_id => @ad.ad_category.id) %>
+          </div>
+          <% if user_signed_in? && @ad.user_id == current_user.id %>
+            <div class="data_actions">
+               <%= link_to 'Edit', edit_ad_path(@ad) %> |
+               <%= link_to 'Back', ads_path %> |
+               <%= link_to 'Destroy', ad, method: :delete, data: {confirm: 'Are you sure?'} %> |
+               <%= link_to 'New Ad', new_ad_path %>
+            </div>
+          <% end %>
+    </div>
+<% end %>
+
+

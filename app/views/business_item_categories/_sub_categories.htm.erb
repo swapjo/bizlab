@@ -1,0 +1,5 @@
+
+<div class="business_item_sub_categories">
+  <% @business_item_sub_categories = BusinessItemCategory.where(' parent_category_id = ?', "#{@business_item_category.id}").paginate(:per_page => 4, :page => params[:page])%>
+  <%= render :partial =>"business_items/business_items", :locals => {:business_items => @business_items } %>
+</div>

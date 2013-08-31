@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="ad_category_image">
+  <% if ad_category.image.to_s != ''  %>
+      <%=image_tag(ad_category.image.to_s) %>
+  <% else %>
+      <%=image_tag("/images/dummy.jpeg" ) %>
+  <% end %>
+</div>
+
+<div class="title">
+  <%= link_to ad_category.name, ad_category %>
+  <%= link_to " ( #{pluralize(Ad.find_all_by_ad_category_id(ad_category.id).count, 'Ad')} )" , ads_path(:ad_category_id => ad_category.id) %>
+</div>
+
+<% ad_category.get_child_categories.each do |subcategory| %>
+    <div class="sub_category">
+      <%= link_to subcategory.name, subcategory %>
+    </div>
+<% end %>
+
+<!--<div class="intro_text">
+  <!--%= ad_category.introtext %-->
+<!--</div>-->
+
+<div class="data_actions">
+  <% if user_signed_in? && current_user.name == "Admin" %>
+      <div><%= link_to 'Edit', edit_ad_category_path(ad_category) %></div>
+      <div><%= link_to 'Destroy', ad_category, method: :delete, data: {confirm: 'Are you sure?'} %></div>
+  <% end %>
+</div>
+

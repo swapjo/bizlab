@@ -1,0 +1,56 @@
+<% width=450
+height = (width*0.66).round(0) %>
+<style>
+  td    {
+      border-style:solid;
+      border-width: 1px;
+      border-color: #000000;
+      border: 2;
+      padding: 0px;
+  }
+</style>
+<table style="border-width: 2; border-color: #ff4301; border: 2" class="<%=shopping_mall.mall_type_id %>">
+  <tr>
+    <td style="width:40%">
+      <%= link_to (shopping_mall.name).upcase , shopping_mall ,  :style => "text-decoration: underline; text-weight: bold; text-size:16px" %>
+    </td>
+    <td rowspan="2">
+      <a data-content="<%= shopping_mall.description %>" title="" data-toggle="popover" class="btn btn-lg btn-danger" href="#" data-original-title="<%= shopping_mall.name %>">MALL INFO</a>
+    </td>
+    <td style="text-decoration: underline, bold; text-align: right">
+      <span style="font-size: 10px">APPROX :</span><span style="font-size: 14px"><%= pluralize( rand(10) , 'Minute' ) %></span>
+    </td>
+  </tr>
+  <tr>
+    <td style="word-wrap: true" width='20%' >
+      <%= shopping_mall.address && shopping_mall.address.address_brief %>
+    </td>
+    <td rowspan="2" width="40%" style="text-align: center">
+      <span id="mall_view<%=shopping_mall.id %>" style="font-weight: bold; text-decoration: underline" rel="popover">VIEW</span> -
+      <span id="mall_share<%=shopping_mall.id %>" style="font-weight: bold; text-decoration: underline" rel="popover">SHARE</span>
+      <br>
+      <span id="mall_save<%=shopping_mall.id %>" style="font-weight: bold; text-decoration: underline" rel="popover">SAVE</span> -
+      <span id="mall_map<%=shopping_mall.id %>" style="font-weight: bold; text-decoration: underline" rel="popover">MAP</span>
+      <br/>
+      <span id="mall_directions<%=shopping_mall.id %>" style="font-weight: bold; text-decoration: underline" rel="popover">DIRECTIONS</span>
+      <%  if !(shopping_mall.address.nil?) %>
+          <script>
+              $('#mall_map<%=shopping_mall.id %>').popover({
+                  placement : 'bottom',
+                  title : 'Title',
+                  content : '<div id="popOverBox"><%= image_tag "http://maps.google.com/maps/api/staticmap?size=#{width}x#{height}&scale=1&sensor=false&zoom=12&feature=all&markers=#{shopping_mall.address.latitude}%2C#{shopping_mall.address.longitude}" %></div>'
+              });
+          </script>
+      <% end %>
+    </td>
+  </tr>
+  <tr height="80%">
+    <td colspan="2">
+      <% if shopping_mall.image.to_s != ''  %>
+          <%=image_tag(shopping_mall.image.to_s, :style => "width:100%") %>
+      <% else %>
+          <%=image_tag("/images/dummy.jpeg", :height=>height, :width => width) %>
+      <% end %>
+    </td>
+  </tr>
+</table>

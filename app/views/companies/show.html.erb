@@ -4,7 +4,13 @@
   <b>Name:</b>
   <%= @company.name %>
 </p>
-
+<p>
+  <% if @company.image.to_s != ''  %>
+      <%=image_tag(@company.image.to_s, :height => '157', :width => '217') %>
+  <% else %>
+      <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+  <% end %>
+</p>
 <p>
   <b>Owner name:</b>
   <%= @company.owner_name %>
@@ -40,26 +46,22 @@
   <%= @company.email %>
 </p>
 
-<p>
-  <b>Ispublished:</b>
-  <%= @company.ispublished %>
-</p>
 
-<p>
-  <b>Isapproved:</b>
-  <%= @company.isapproved %>
-</p>
+<div class="company_ads">
+  <% @ads = Ad.where(' company_id = ?', "#{@company.id}").paginate(:per_page => 12, :page => params[:page])%>
+  <%= render :partial =>"ads/ads", :locals => {:ads=> @ads} %>
 
-<p>
-  <b>Image:</b>
-  <%= @company.image %>
-</p>
+</div>
 
-<p>
-  <b>Address:</b>
-  <%= @company.address_id %>
-</p>
+<div class="shopping_mall_business_items">
+  <% @business_items = BusinessItem.where(' company_id = ?', "#{@company.id}").paginate(:per_page => 12, :page => params[:page])%>
+  <%= render :partial =>"business_items/business_items", :locals => {:business_items => @business_items } %>
+
+</div>
+
+<% if user_signed_in? && @company.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_company_path(@company) %> |
+    <%= link_to "Back to My Account", "/info/user_home" %>
+<% end %>
 
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>

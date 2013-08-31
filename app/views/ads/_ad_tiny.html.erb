@@ -1,0 +1,21 @@
+<div class="dealio" >
+  <div class="image">
+    <a href="/ads/<%=ad.id%>/" title="<%=ad.title%>">
+      <% if ad.image.to_s != ''  %>
+          <%=image_tag(ad.image.to_s, :width => '223',:height => '138') %>
+      <% else %>
+          <%=image_tag("/images/no_image.gif", :height => '138', :width => '223') %>
+      <% end %>
+    </a>
+  </div>
+
+  <div class="title" title="<%=ad.title%>">
+    <a href="/ads/<%=ad.id%>/"><%=ad.title[0..28]%> </a>
+  </div>
+  <table width=100% >
+    <tr>
+      <td width=50% class="discount"  title="<%=ad.title%>" ><%= ad.price.to_i %> % Off</td>
+      <td width=50% class="more"  title="<%=ad.title%>" ><a href="/ads/<%=ad.id%>/">More</a></td>
+    </tr>
+  </table>
+</div>

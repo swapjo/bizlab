@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span9">
+      <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <% @ad_categories = AdCategory.all(:select => :id).collect(&:id)
+             @loopvar = 0
+             #puts "loopvar ==> #{@loopvar}"
+             @ad_categories.each do |x|
+               #puts "ad_category ==> #{x}"
+               @ad = Ad.find_all_by_ad_category_id(x).first
+               unless @ad.nil?
+                 #puts "ad ==> #{@ad.id}"
+          %>
+                  <li data-target="#myCarousel" data-slide-to="<%=@loopvar%>" <% if @loopvar==1 %> class="active" <% end %>></li>
+              <% end
+                 @loopvar+=1
+                 end %>
+        </ol>
+        <div class="carousel-inner">
+          <% @ad_categories = AdCategory.all(:select => :id).collect(&:id)
+             @loopvar = 0
+             puts "loopvar ==> #{@loopvar}"
+             @ad_categories.each do |x|
+               #@loopvar+=1
+               #puts "ad_category ==> #{x}"
+               @ad = Ad.find_all_by_ad_category_id(x).first
+               unless @ad.nil?
+                 #puts "ad ==> #{@ad.id}"
+          %>
+                  <div class="item
+                    <%= @loopvar %>
+                    <% if (@loopvar == 1)  %>
+                        active
+                    <% end %>">
+                    <% if @ad.image.to_s != ''  %>
+                        <%=image_tag(@ad.image.to_s, :height => '100%', :width => '100%')%>
+                    <% else %>
+                        <%=image_tag("/images/dummy.jpeg", :height => '257') %>
+                    <% end %>
+                    <div class="carousel-caption">
+                      <%= render :partial => "ads/ad_slider_header" %>
+                      <%= render :partial => "ads/ad_slider_footer" %>
+                    </div>
+                  </div>
+              <% end
+                 @loopvar+= 1
+                 end %>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="panel" style="background: none; border: none">
+        <%= render "/common/quicklink" %>
+      </div>
+    </div>
+  </div>
+</div>

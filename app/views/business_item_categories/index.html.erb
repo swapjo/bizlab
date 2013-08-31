@@ -1,31 +1,50 @@
-<h1>Listing business_item_categories</h1>
+
+<% ('A'..'Z').each do |char| %>
+
+    <% if char==params[:char] %>
+        <%= link_to char, business_item_categories_path(:char => char), :class => 'selected_char' %>
+    <% else %>
+        <%= link_to char, business_item_categories_path(:char => char) %>
+    <% end %>
+<% end %>
+<%= link_to "ALL", ad_categories_path %>
 
 <table>
   <tr>
     <th>Name</th>
+    <th>SubCategories</th>
+    <th>Business Item count</th>
+    <th>Parent Category</th>
     <th>Introtext</th>
     <th>Description</th>
     <th>Ispublished</th>
-    <th>Parent category</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @business_item_categories.each do |business_item_category| %>
-  <tr>
-    <td><%= business_item_category.name %></td>
-    <td><%= business_item_category.introtext %></td>
-    <td><%= business_item_category.description %></td>
-    <td><%= business_item_category.ispublished %></td>
-    <td><%= business_item_category.parent_category_id %></td>
-    <td><%= link_to 'Show', business_item_category %></td>
-    <td><%= link_to 'Edit', edit_business_item_category_path(business_item_category) %></td>
-    <td><%= link_to 'Destroy', business_item_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @business_item_categories.each do |business_item_category| %>
+      <tr>
+        <td><%= business_item_category.name %></td>
+        <td>
+          <% business_item_category.get_child_categories.each do |subcategory| %>
+              <b><%= subcategory && subcategory.name%>, </b>
+          <% end%>
+        </td>
+        <td>
+          <% BusinessItem.where('business_item_category_id = ?',"#{:id}").count %>
+        </td>
+        <td><%= business_item_category.parent_category_id %></td>
+        <td><%= business_item_category.introtext %></td>
+        <td><%= business_item_category.description %></td>
+        <td><%= business_item_category.ispublished %></td>
+        <td><%= link_to 'Show', business_item_category %></td>
+        <td><%= link_to 'Edit', edit_business_item_category_path(business_item_category) %></td>
+        <td><%= link_to 'Destroy', business_item_category, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Business item category', new_business_item_category_path %>

@@ -6,50 +6,30 @@
 </p>
 
 <p>
+  <% if @business_item.image.to_s != ''  %>
+      <%=image_tag(@business_item.image.to_s, :height => '157', :width => '217') %>
+  <% else %>
+      <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+  <% end %>
+</p>
+<div class="category">
   <b>Business item category:</b>
-  <%= @business_item.business_item_category_id %>
-</p>
+  <%= link_to @business_item.business_item_category.name, BusinessItemCategory.find(@business_item.business_item_category_id || 0) %> ===>
+  <%= link_to "#{pluralize(BusinessItem.find_all_by_business_item_category_id(@business_item.business_item_category.id).count, 'Business Item')} for this category" , ads_path(:ad_category_id => @business_item.business_item_category.id) %>
+</div>
 
-<p>
+<div class="company">
   <b>Company:</b>
-  <%= @business_item.company_id %>
-</p>
-
-<p>
+  <%= link_to @business_item.company.name, Company.find(@business_item.company_id || 0) %> ===>
+  <%= link_to "#{pluralize(BusinessItem.find_all_by_company_id(@business_item.company.id).count, 'Business Item')} with this mall", business_items_path(:company_id => @business_item.company.id) %>
+</div>
+<div class="shopping_mall">
   <b>Shopping mall:</b>
-  <%= @business_item.shopping_mall_id %>
-</p>
+  <%= link_to @business_item.shopping_mall.name, ShoppingMall.find(@business_item.shopping_mall_id || 0) %> ===>
+  <%= link_to "#{pluralize(BusinessItem.find_all_by_shopping_mall_id(@business_item.shopping_mall.id).count, 'Business Item')} for this mall", business_items_path(:shopping_mall_id => @business_item.shopping_mall.id) %>
+</div>
 
-<p>
-  <b>Address:</b>
-  <%= @business_item.address_id %>
-</p>
-
-<p>
-  <b>Ispublished:</b>
-  <%= @business_item.ispublished %>
-</p>
-
-<p>
-  <b>Isapproved:</b>
-  <%= @business_item.isapproved %>
-</p>
-
-<p>
-  <b>Expiry date:</b>
-  <%= @business_item.expiry_date %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @business_item.image %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @business_item.user_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_business_item_path(@business_item) %> |
+<% if user_signed_in? && @business_item.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_business_item_path(@business_item) %>  |
+<% end %>
 <%= link_to 'Back', business_items_path %>

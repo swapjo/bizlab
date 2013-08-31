@@ -6,26 +6,24 @@
     <th>Introtext</th>
     <th>Description</th>
     <th>Ispublished</th>
-    <th>Parent category</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @job_categories.each do |job_category| %>
-  <tr>
-    <td><%= job_category.name %></td>
-    <td><%= job_category.introtext %></td>
-    <td><%= job_category.description %></td>
-    <td><%= job_category.ispublished %></td>
-    <td><%= job_category.parent_category_id %></td>
-    <td><%= link_to 'Show', job_category %></td>
-    <td><%= link_to 'Edit', edit_job_category_path(job_category) %></td>
-    <td><%= link_to 'Destroy', job_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @job_categories.each do |job_category| %>
+      <tr>
+        <td><%= job_category.name %></td>
+        <td><%= job_category.introtext %></td>
+        <td><%= job_category.description %></td>
+        <td><%= job_category.ispublished %></td>
+        <td><%= link_to 'Show', job_category %></td>
+        <td><%= link_to 'Edit', edit_job_category_path(job_category) %></td>
+        <td><%= link_to 'Destroy', job_category, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Job category', new_job_category_path %>

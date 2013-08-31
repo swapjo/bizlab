@@ -1,73 +1,74 @@
-<%= form_for(@ad) do |f| %>
-  <% if @ad.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
+<%= form_for @ad, :html => {:multipart => true} do |f| %>
+    <% if @ad.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
 
-      <ul>
-      <% @ad.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @ad.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %>
+      <br/>
+      <%= f.text_field :title %>
     </div>
-  <% end %>
+    <div class="field">
+      <%= f.label :image %>
+      <br/>
+      <%= f.file_field :image coupa%>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <br/>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :ad_category_id %>
+      <br/>
+      <%=collection_select(:ad, :ad_category_id, AdCategory.all, :id, :name  ) %> | <%= link_to "Add New Ad Category", new_ad_category_path %>
+    </div>
+    <div class="field">
+      <%= f.label :price %>
+      <br/>
+      <%= f.text_field :price %>
+    </div>
+    <div class="field">
+      <%= f.label :address_id %>
+      <br/>
+      <%=collection_select(:ad, :address_id, Address.user_related(current_user.id), :id, :address_brief    ) %> | <%= link_to "Add New Addresses", new_address_path %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :ad_category_id %><br />
-    <%= f.number_field :ad_category_id %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :address_id %><br />
-    <%= f.number_field :address_id %>
-  </div>
-  <div class="field">
-    <%= f.label :company_id %><br />
-    <%= f.number_field :company_id %>
-  </div>
-  <div class="field">
-    <%= f.label :shopping_mall_id %><br />
-    <%= f.number_field :shopping_mall_id %>
-  </div>
-  <div class="field">
-    <%= f.label :ad_position_id %><br />
-    <%= f.number_field :ad_position_id %>
-  </div>
-  <div class="field">
-    <%= f.label :ispublished %><br />
-    <%= f.check_box :ispublished %>
-  </div>
-  <div class="field">
-    <%= f.label :isapproved %><br />
-    <%= f.check_box :isapproved %>
-  </div>
-  <div class="field">
-    <%= f.label :expiry_date %><br />
-    <%= f.date_select :expiry_date %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :ad_type_id %><br />
-    <%= f.number_field :ad_type_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    </div>
+    <div class="field">
+      <%= f.label :company_id %>
+      <br/>
+      <%=collection_select(:ad, :company_id, Company.user_related(current_user.id), :id, :name   ) %>  | <%= link_to "Add another company", new_company_path %>
+    </div>
+    <div class="field">
+      <%= f.label :shopping_mall_id %>
+      <br/>
+      <%=collection_select(:ad, :shopping_mall_id, ShoppingMall.all, :id, :name  ) %> | <%= link_to "Add Mall", new_shopping_mall_path %>
+    </div>
+    <div class="field">
+      <%= f.label :ad_position_id %>
+      <br/>
+      <%=collection_select(:ad, :ad_position_id, AdPosition.all, :id, :name  ) %>
+    </div>
+    <div class="field">
+      <%= f.label :ispublished %>
+      <br/>
+      <%= f.check_box :ispublished %>
+    </div>
+    <div class="field">
+      <%= f.label :expiry_date %>
+      <br/>
+      <%= f.date_select :expiry_date %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
+<%= link_to 'Back', ads_path %>

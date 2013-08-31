@@ -2,56 +2,49 @@
 
 <table>
   <tr>
-    <th>Contact name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Fax</th>
     <th>Address line one</th>
     <th>Address line two</th>
-    <th>Postal code</th>
+    <th>Street</th>
     <th>City</th>
+    <th>Postal code</th>
     <th>Country</th>
     <th>Website</th>
     <th>Google map code</th>
-    <th>Chat code</th>
-    <th>Ispublished</th>
-    <th>User</th>
-    <th>Street</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Gmaps</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Contact: </th>
+    <th colspan="3">Actions</th>
   </tr>
 
-<% @addresses.each do |address| %>
-  <tr>
-    <td><%= address.contact_name %></td>
-    <td><%= address.email %></td>
-    <td><%= address.phone %></td>
-    <td><%= address.fax %></td>
-    <td><%= address.address_line_one %></td>
-    <td><%= address.address_line_two %></td>
-    <td><%= address.postal_code %></td>
-    <td><%= address.city %></td>
-    <td><%= address.country %></td>
-    <td><%= address.website %></td>
-    <td><%= address.google_map_code %></td>
-    <td><%= address.chat_code %></td>
-    <td><%= address.ispublished %></td>
-    <td><%= address.user_id %></td>
-    <td><%= address.street %></td>
-    <td><%= address.latitude %></td>
-    <td><%= address.longitude %></td>
-    <td><%= address.gmaps %></td>
-    <td><%= link_to 'Show', address %></td>
-    <td><%= link_to 'Edit', edit_address_path(address) %></td>
-    <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @addresses.each do |address| %>
+      <tr>
+        <td><%= address.address_line_one %></td>
+        <td><%= address.address_line_two %></td>
+        <td><%= address.street %></td>
+        <td><%= address.city %></td>
+        <td><%= address.postal_code %></td>
+        <td><%= address.country %></td>
+        <td><%= address.website %></td>
+        <td>
+          <% width=450
+             height = (width*0.66).round(0) %>
+
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=#{width}x#{height}&scale=1&sensor=false&zoom=12&feature=all&markers=#{shopping_mall.address.latitude}%2C#{shopping_mall.address.longitude}" %>
+          <!--%= gmaps4rails(@json) %-->
+
+        </td>
+        <td><%= address.contact_name %>
+          <div>Email <%= address.email %></div>
+          <div>Phone <%= address.phone %></div>
+          <div>Fax <%= address.fax %></div>
+          <div>Chat code <%= address.chat_code %></div>
+          <div>Ispublished</div>
+        </td>
+        <td><%= link_to 'Show', address %></td>
+        <td><%= link_to 'Edit', edit_address_path(address) %></td>
+        <td><%= link_to 'Destroy', address, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Address', new_address_path %>

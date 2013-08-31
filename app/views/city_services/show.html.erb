@@ -4,7 +4,13 @@
   <b>Title:</b>
   <%= @city_service.title %>
 </p>
-
+<p>
+  <% if @city_service.image.to_s != ''  %>
+      <%=image_tag(@city_service.image.to_s, :height => '157', :width => '217') %>
+  <% else %>
+      <%=image_tag("/images/dummy.jpeg", :height => '157', :width => '217') %>
+  <% end %>
+</p>
 <p>
   <b>Description:</b>
   <%= @city_service.description %>
@@ -18,11 +24,6 @@
 <p>
   <b>Ispublished:</b>
   <%= @city_service.ispublished %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @city_service.image %>
 </p>
 
 

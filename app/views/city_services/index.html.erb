@@ -6,26 +6,24 @@
     <th>Description</th>
     <th>City service category</th>
     <th>Ispublished</th>
-    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @city_services.each do |city_service| %>
-  <tr>
-    <td><%= city_service.title %></td>
-    <td><%= city_service.description %></td>
-    <td><%= city_service.city_service_category_id %></td>
-    <td><%= city_service.ispublished %></td>
-    <td><%= city_service.image %></td>
-    <td><%= link_to 'Show', city_service %></td>
-    <td><%= link_to 'Edit', edit_city_service_path(city_service) %></td>
-    <td><%= link_to 'Destroy', city_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @city_services.each do |city_service| %>
+      <tr>
+        <td><%= city_service.title %></td>
+        <td><%= city_service.description %></td>
+        <td><%= city_service.city_service_category_id %></td>
+        <td><%= city_service.ispublished %></td>
+        <td><%= link_to 'Show', city_service %></td>
+        <td><%= link_to 'Edit', edit_city_service_path(city_service) %></td>
+        <td><%= link_to 'Destroy', city_service, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New City service', new_city_service_path %>

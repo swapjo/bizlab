@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="span4 columns">
+    <div class="panel radious">
+      Sections
+    </div>
+  </div>
+  <div class="span8 columns">
+    <div class="row">
+      <div class="panel collout radious">
+          <p class="title" style="left: 0px; height: 50px;">
+            <a href="#panel1">Ads</a>
+          </p>
+          <div class="panel radious">
+            <p>
+              <% @ads = Ad.paginate(:per_page => 12, :page => params[:page])%>
+              <%= render :partial =>"ads/ads", :locals => {:ads=> @ads} %>
+            </p>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="panel collout radious">
+        <div class="section-container tabs">
+          <p class="title" style="left: 0px; height: 50px;">
+            <a href="#panel2">Categories</a>
+          </p>
+          <div class="content" data-slug="panel2">
+            <p>Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -11,19 +11,19 @@
     <th></th>
   </tr>
 
-<% @mall_types.each do |mall_type| %>
-  <tr>
-    <td><%= mall_type.name %></td>
-    <td><%= mall_type.introtext %></td>
-    <td><%= mall_type.description %></td>
-    <td><%= mall_type.ispublished %></td>
-    <td><%= link_to 'Show', mall_type %></td>
-    <td><%= link_to 'Edit', edit_mall_type_path(mall_type) %></td>
-    <td><%= link_to 'Destroy', mall_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @mall_types.each do |mall_type| %>
+      <tr>
+        <td><%= mall_type.name %></td>
+        <td><%= mall_type.introtext %></td>
+        <td><%= mall_type.description %></td>
+        <td><%= mall_type.ispublished %></td>
+        <td><%= link_to 'Show', mall_type %></td>
+        <td><%= link_to 'Edit', edit_mall_type_path(mall_type) %></td>
+        <td><%= link_to 'Destroy', mall_type, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Mall type', new_mall_type_path %>
