@@ -1,5 +1,9 @@
 Bizlab::Application.routes.draw do
 
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/removed_index.html.
+  root :to => 'info#home'
+  
   resources :shopping_malls
   resources :mall_types
   resources :jobs
@@ -20,13 +24,11 @@ Bizlab::Application.routes.draw do
   resources :ad_categories
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
-
   devise_for :users
 
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-
 
   get "info/home"
   get "info/about"
@@ -83,8 +85,6 @@ Bizlab::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/removed_index.html.
 
 
   # See how all your routes lay out with "rake routes"
