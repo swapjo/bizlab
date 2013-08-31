@@ -9,10 +9,10 @@ gem 'sqlite3'
 gem 'devise'
 gem 'will_paginate'
 gem 'kaminari'
-
+gem 'nifty-generators'
 gem 'activeadmin' , ' 0.5.1'
 gem 'carrierwave'
-
+gem 'geocoder'
 
 # Gems used only for assets and not required
 # in production environments by default.

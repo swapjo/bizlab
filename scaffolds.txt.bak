@@ -17,4 +17,4 @@ rails generate scaffold Job title:string description:text vacancy_count:integer 
 rails generate scaffold MallType name:string introtext:string description:text ispublished:boolean  
 rails generate scaffold ShoppingMall name:string description:text mall_type_id:integer ispublished:boolean   image:string address_id:integer
 
-rails generate nify scaffold location address:string latitude:float longitude:float  
+rails generate nify scaffold Location address:string latitude:float longitude:float  

@@ -43,7 +43,6 @@ GEM
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (3.0.2)
-    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
@@ -71,6 +70,7 @@ GEM
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    geocoder (1.1.8)
     has_scope (0.5.1)
     hike (1.2.3)
     i18n (0.6.5)
@@ -96,6 +96,7 @@ GEM
       polyamorous (~> 0.5.0)
     mime-types (1.24)
     multi_json (1.7.9)
+    nifty-generators (0.4.6)
     orm_adapter (0.4.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -165,8 +166,10 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
   devise
+  geocoder
   jquery-rails (= 2.3.0)
   kaminari
+  nifty-generators
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sqlite3

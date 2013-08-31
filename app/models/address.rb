@@ -5,9 +5,9 @@ class Address < ActiveRecord::Base
   has_many :business_items
   has_many :shopping_malls
 
-  #geocoded_by :address_brief
+  geocoded_by :address_brief
 
-  #acts_as_gmappable
+  acts_as_gmappable
 
   attr_accessible :address_line_one, :address_line_two, :chat_code, :city, :company_id, :contact_name, \
   :country, :email, :fax, :google_map_code, :ispublished, :phone, :postal_code, :street, \
