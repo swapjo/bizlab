@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="title" DisplayLabel="title" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="business_item_category_id" DisplayLabel="business_item_category_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="company_id" DisplayLabel="company_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="shopping_mall_id" DisplayLabel="shopping_mall_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="address_id" DisplayLabel="address_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="isapproved" DisplayLabel="isapproved" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="expiry_date" DisplayLabel="expiry_date" FieldType="Date" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="image" DisplayLabel="image" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="user_id" DisplayLabel="user_id" FieldType="Integer" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" title="Visual Studio 2009" business_item_category_id="1" company_id="1" shopping_mall_id="1" address_id="36" ispublished="False" isapproved="False" expiry_date="04/21/2013" created_at="2013-04-21 14:12:41" updated_at="2013-06-08 11:41:57" image="Visual_Studio_2009.jpg" user_id="1"/>
+<ROW id="2" title="Norton Antivirus" business_item_category_id="1" company_id="2" shopping_mall_id="1" address_id="37" ispublished="False" isapproved="False" expiry_date="04/21/2013" created_at="2013-04-21 14:13:23" updated_at="2013-06-08 11:43:01" image="Norton_Antivirus.jpg" user_id="1"/>
+<ROW id="3" title="Window 7 Operating system" business_item_category_id="1" company_id="2" shopping_mall_id="1" address_id="34" ispublished="False" isapproved="False" expiry_date="04/21/2013" created_at="2013-04-21 14:14:53" updated_at="2013-06-08 12:01:02" image="Window_7.jpg" user_id="1"/>
+<ROW id="4" title="SQL Database" business_item_category_id="1" company_id="2" shopping_mall_id="6" address_id="39" ispublished="" isapproved="" expiry_date="06/08/2011" created_at="2013-06-08 11:36:31" updated_at="2013-06-08 11:36:31" image="sql_db.jpg" user_id="1"/>
+</ROWDATA>
+</DATAPACKET>

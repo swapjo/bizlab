@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="value" DisplayLabel="value" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="priority" DisplayLabel="priority" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="image" DisplayLabel="image" FieldType="String" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+</ROWDATA>
+</DATAPACKET>

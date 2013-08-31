@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="contact_name" DisplayLabel="contact_name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="email" DisplayLabel="email" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="phone" DisplayLabel="phone" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="fax" DisplayLabel="fax" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="address_line_one" DisplayLabel="address_line_one" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="address_line_two" DisplayLabel="address_line_two" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="postal_code" DisplayLabel="postal_code" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="city" DisplayLabel="city" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="country" DisplayLabel="country" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="website" DisplayLabel="website" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="google_map_code" DisplayLabel="google_map_code" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="chat_code" DisplayLabel="chat_code" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="user_id" DisplayLabel="user_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="street" DisplayLabel="street" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="latitude" DisplayLabel="latitude" FieldType="Float" FieldClass="TField"/>
+<FIELD FieldName="longitude" DisplayLabel="longitude" FieldType="Float" FieldClass="TField"/>
+<FIELD FieldName="gmaps" DisplayLabel="gmaps" FieldType="Boolean" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" contact_name="Mr. Johny" email="johny@smartshop.com" phone="123456789" fax="123456780" address_line_one="" address_line_two="Park Avenue" postal_code="1" city="Ottawa" country="1" website="1" google_map_code="1" chat_code="1" ispublished="False" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:12" user_id="1" street="1 East Street" latitude="41.66" longitude="-86.23" gmaps=""/>
+<ROW id="2" contact_name="Mr. Smith" email="mrsmith02@gmail.com" phone="40141209655" fax="" address_line_one="No. 303, 3rd Floor, Pankaj House" address_line_two="Plot No. 3, H - Block, Sarita Vihar " postal_code="110076" city="New Delhi " country="India" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:13" user_id="1" street="" latitude="28.54" longitude="77.13" gmaps=""/>
+<ROW id="3" contact_name="Shawn J" email="shawn.jones@rogers.com" phone="9057279391" fax="" address_line_one="8405 112 Street NW" address_line_two="Edmonton" postal_code="T6G2B7" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:14" user_id="1" street="" latitude="53.52" longitude="-113.52" gmaps=""/>
+<ROW id="4" contact_name="Samina" email="samina.shah@hotmail.com" phone="4163928445" fax="" address_line_one="850 Coxwell Avenue" address_line_two="(North-west corner of Coxwell Avenue and Mortimer Avenue)" postal_code="M4C 5R1" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:15" user_id="1" street="" latitude="43.69" longitude="-79.32" gmaps=""/>
+<ROW id="5" contact_name="Brishna Wahid" email="Brishna.Wahid01@gmail.com" phone="8606498066" fax="" address_line_one="No. A - 72, Sector - 34" address_line_two="" postal_code="201301" city="Noida" country="India" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:16" user_id="6" street="" latitude="28.58" longitude="77.36" gmaps=""/>
+<ROW id="6" contact_name="Mike Roger" email="Mike1976@gmail.com" phone="8002334175" fax="" address_line_one="32-D, Pocket D1" address_line_two="Mayur Vihar, Phase III" postal_code="110096" city="Delhi" country="India" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:17" user_id="6" street="" latitude="28.61" longitude="77.34" gmaps=""/>
+<ROW id="7" contact_name="Samina Khan" email="Samina.Khan38@yahoo.com" phone="7805137141" fax="" address_line_one="E-27" address_line_two="South Extension -II" postal_code="110049" city="Delhi" country="India" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:18" user_id="6" street="" latitude="28.56" longitude="77.22" gmaps=""/>
+<ROW id="8" contact_name="John Andrew" email="Andrew.cool@yahoo.com" phone="5799870021" fax="" address_line_one=" No. 606, Chiranjiv Tower" address_line_two="No. 43, Nehru Place" postal_code="110019" city="New Delhi" country="India" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-15 16:15:23" updated_at="2013-07-07 19:43:18" user_id="6" street="" latitude="28.55" longitude="77.25" gmaps=""/>
+<ROW id="9" contact_name="" email="" phone="" fax="" address_line_one="Don Mills Road—Sheppard Avenue" address_line_two="North York " postal_code="" city="Brampton" country="" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-24 11:24:51" updated_at="2013-07-07 19:43:22" user_id="1" street="" latitude="43.68" longitude="-79.77" gmaps=""/>
+<ROW id="10" contact_name="" email="" phone="" fax="" address_line_one="The Queensway—The West Mall" address_line_two="Etobicoke" postal_code="" city="Brampton" country="" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-05-24 11:34:53" updated_at="2013-07-07 19:43:23" user_id="1" street="" latitude="43.62" longitude="-79.53" gmaps=""/>
+<ROW id="11" contact_name="Arun Dixit" email="arun.dixit@gail.com" phone="2897680023" fax="" address_line_one="100 Queen Street West" address_line_two="North-west corner of Queen Street West and Bay Street
+" postal_code="ON M5H 2N2" city="Toronto" country="1" website="1" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:47:23" user_id="1" street="" latitude="43.65" longitude="-79.38" gmaps=""/>
+<ROW id="12" contact_name="Sumit Kumar" email="sumit.kumar@gmail.com" phone="2895580065" fax="ON M9C 2Y2" address_line_one="399 The West Mall" address_line_two="South-east corner of Burnhamthorpe and The West Mall" postal_code="1" city="Toronto" country="1" website="1" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:47:25" user_id="1" street="" latitude="43.65" longitude="-79.56" gmaps=""/>
+<ROW id="13" contact_name="Umesh Yadav" email="umesh.sqa@gmail.com" phone="2895580565" fax="" address_line_one="150 Borough Drive " address_line_two="Toronto, ON " postal_code="M1P 4N7" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:27" user_id="1" street="" latitude="43.77" longitude="-79.26" gmaps=""/>
+<ROW id="14" contact_name="Suresh Yadav" email="umesh.sqa@gmail.com" phone="2895580565" fax="" address_line_one="158 Borough Drive  (North-west corner of McCowan Road and Ellesmere Road)" address_line_two="Toronto, ON " postal_code="M1P 4N7" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:28" user_id="1" street="" latitude="43.77" longitude="-79.27" gmaps=""/>
+<ROW id="15" contact_name="Raymond" email="raymond.deff@gmail.com" phone="2563580565" fax="" address_line_one="Corporation of the City of Brampton, 2 Wellington Street West" address_line_two="Brampton" postal_code="L6Y 4R2" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:29" user_id="1" street="" latitude="43.65" longitude="-79.38" gmaps=""/>
+<ROW id="16" contact_name="Miss. Julia" email="mat.julia@gmail.com" phone="2897680023" fax="" address_line_one="589 Barton St" address_line_two="Hamilton" postal_code="L8E 6E4" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:30" user_id="1" street="" latitude="43.22" longitude="-79.70" gmaps=""/>
+<ROW id="17" contact_name="Mr. Frank" email="frank.canada@hotmail.com" phone="6479319436" fax="" address_line_one="1800 The Queensway" address_line_two="Etobicoke" postal_code="L8E 6E4" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:30" user_id="1" street="" latitude="43.61" longitude="-79.56" gmaps=""/>
+<ROW id="18" contact_name="Mr. George Matt" email="George.matt@hotmail.com" phone="2897680023" fax="" address_line_one="9902 100 Ave" address_line_two="Grande Prairie" postal_code="L8E 6E4" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:31" user_id="1" street="" latitude="55.17" longitude="-118.79" gmaps=""/>
+<ROW id="19" contact_name="Phill Kart" email="phill.concept@hotmail.com" phone="2567670023" fax="" address_line_one="
+337 Queen St S" address_line_two="Mississauga" postal_code="L5M 1M3" city="Toronto" country="Canada" website="" google_map_code="" chat_code="" ispublished="" created_at="2013-06-06 06:33:48" updated_at="2013-07-07 19:43:32" user_id="1" street="" latitude="43.58" longitude="-79.71" gmaps=""/>
+</ROWDATA>
+</DATAPACKET>

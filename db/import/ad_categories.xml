@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="introtext" DisplayLabel="introtext" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="description" DisplayLabel="description" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="image" DisplayLabel="image" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="parent_category_id" DisplayLabel="parent_category_id" FieldType="Integer" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Apparel &amp; Garments" introtext="Apparel, Clothing &amp; Garments " description="" ispublished="True" created_at="2013-04-19 13:56:32" updated_at="2013-04-21 07:41:23" image="apparel.jpeg" parent_category_id=""/>
+<ROW id="2" name="Ladies Apparel " introtext="Ladies Apparel &amp; Garments" description="" ispublished="True" created_at="2013-04-19 13:57:26" updated_at="2013-04-21 10:28:30" image="ladies.jpg" parent_category_id="1"/>
+<ROW id="3" name="Kids Apparel &amp; Clothings" introtext="Kids Apparel &amp; Garment" description="" ispublished="False" created_at="2013-04-19 13:58:10" updated_at="2013-04-21 10:33:13" image="kids.jpg" parent_category_id="1"/>
+<ROW id="4" name="Men's Apparel &amp; Clothings" introtext="Men Apparel &amp; Garments" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:54:33" image="men_garment.jpg" parent_category_id="1"/>
+<ROW id="5" name="Building &amp; Construction" introtext="Building Construction Material, Equipment and Sanitaryware" description="" ispublished="False" created_at="2013-04-19 13:59:06" updated_at="2013-04-21 10:35:27" image="building-construction.jpg" parent_category_id=""/>
+<ROW id="6" name="Eyewear, Sunglasses &amp; Accessories" introtext="Eyewear, Eyeglasses, Sunglasses &amp; Eyewear Accessories" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:36:32" image="eyeware.jpg" parent_category_id="1"/>
+<ROW id="7" name="Construction Machinery" introtext="Building &amp; Construction Machinery, Equipment &amp; Tools" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:37:50" image="construction_machine.jpg" parent_category_id="5"/>
+<ROW id="8" name="Ceramic Tiles &amp; Floorings " introtext="Flooring &amp; Wall: Ceramic, Glass, Metal &amp; Other Miscellaneous Tiles &amp; Coverings" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:39:22" image="designer-flooring-125x125.jpg" parent_category_id="5"/>
+<ROW id="9" name="Hardware Fittings" introtext="Hardware Fittings" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:40:34" image="hardware.jpg" parent_category_id="5"/>
+<ROW id="10" name="Computer" introtext="Computer Hardware, Software &amp; Accessories" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:47:18" image="computer.jpeg" parent_category_id=""/>
+<ROW id="11" name="Computer Hardware" introtext="Computer Hardware &amp; Peripherals" description="" ispublished="True" created_at="" updated_at="2013-04-21 07:45:33" image="computer_hardware.jpg" parent_category_id="10"/>
+<ROW id="12" name="Computer Software" introtext="Computer Software Packages" description="" ispublished="True" created_at="" updated_at="2013-04-21 07:46:13" image="computer_software.jpg" parent_category_id="10"/>
+<ROW id="13" name="Computer Stationery and Consumables" introtext="Computer Stationery and Consumables like Floppies, Ribbons etc" description="" ispublished="True" created_at="" updated_at="2013-04-21 07:46:40" image="computer_stationaries.jpg" parent_category_id="10"/>
+<ROW id="14" name="Food &amp; Beverages" introtext="Agro, Marine &amp; Other Food Products and Beverages" description="" ispublished="True" created_at="" updated_at="2013-04-21 10:48:48" image="food_beverage.jpg" parent_category_id=""/>
+<ROW id="15" name="Cereals &amp; Food Grains" introtext="Rice, Wheat, Pulses &amp; Other Food Grains" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:13:08" image="cereals.jpg" parent_category_id="14"/>
+<ROW id="16" name="Fruits &amp; Vegetables" introtext="Fresh, Dried, Preserved &amp; Dehydrated Fruits and Vegetables" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:14:07" image="fruit_veg.jpg" parent_category_id="14"/>
+<ROW id="17" name="Furniture" introtext="Furniture, Furniture Supplies &amp; Furniture Hardware" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:15:04" image="furtniture.jpg" parent_category_id=""/>
+<ROW id="18" name="Furniture Fittings" introtext="Furniture Fittings &amp; Accessories" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:16:06" image="furniture_fittings.jpg" parent_category_id="17"/>
+<ROW id="19" name="Wooden Furniture" introtext="Wooden Furniture For Home, Office &amp; Industrial Use" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:30:04" image="wooden_furniture.jpg" parent_category_id="17"/>
+<ROW id="20" name="Gems &amp; Jewellery" introtext="Gems, Jewellery, Precious Stones &amp; Beads" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:31:14" image="gems_jewellaries.jpg" parent_category_id=""/>
+<ROW id="21" name="Diamond &amp; Diamond Jewelry" introtext="Diamond &amp; Diamond Jewelry" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:32:29" image="diamond_jewel.jpg" parent_category_id="20"/>
+<ROW id="22" name="Gemstones" introtext="Precious &amp; Semi-Precious Stones, Gemstones and Zodiac Stones" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:33:39" image="gem_stones.jpg" parent_category_id="20"/>
+<ROW id="23" name="Gold &amp; Gold Jewellery" introtext="Gold &amp; Gold Jewellery" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:35:02" image="gold_and_gold_jewellary.jpg" parent_category_id="20"/>
+<ROW id="24" name="Medical Products" introtext="Medical, Pharma, Surgical &amp; Healthcare Products" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:35:49" image="medical_prod.jpg" parent_category_id=""/>
+<ROW id="25" name="Dental Supplies" introtext="Dental Supplies, Dentist Tools &amp; Equipment" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:36:38" image="dental_supplies.jpg" parent_category_id="24"/>
+<ROW id="26" name="Clinical Diagnostic Instruments" introtext="Clinical Diagnostic &amp; Patient Monitoring Instruments" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:38:08" image="clinical_intru.jpg" parent_category_id="24"/>
+<ROW id="27" name="Surgical &amp; Medical Consumables" introtext="Surgical &amp; Medical Consumables &amp; Disposables" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:39:50" image="surgical_consumables.jpg" parent_category_id="24"/>
+<ROW id="28" name="Scientific Instruments" introtext="Scientific, Measuring, Laboratory Instruments &amp; Supplies" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:40:49" image="scie_instru.jpg" parent_category_id=""/>
+<ROW id="29" name="Laboratory &amp; Lab Equipment" introtext="Laboratory Equipment and Lab Testing Equipment" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:42:05" image="lab_equipments.jpg" parent_category_id="28"/>
+<ROW id="30" name="Testing Equipment" introtext="Testing Equipment and Machines" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:45:30" image="testing_eqip.jpg" parent_category_id="28"/>
+<ROW id="31" name="Sporting Goods, Toys &amp; Games" introtext="Sporting Goods, Toys &amp; Games" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:44:15" image="sporting_goods.jpg" parent_category_id=""/>
+<ROW id="32" name="Gymnastics Equipment" introtext="Aerobics &amp; Gymnastics Equipment &amp; Supplies" description="" ispublished="True" created_at="" updated_at="2013-04-21 11:43:09" image="gynastic.jpg" parent_category_id="31"/>
+<ROW id="33" name="Restaurant Dishes " introtext="Restaurant Dishes " description="" ispublished="True" created_at="" updated_at="2013-05-30 10:35:44" image="feast.jpg" parent_category_id="14"/>
+</ROWDATA>
+</DATAPACKET>

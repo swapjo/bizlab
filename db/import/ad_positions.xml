@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Top" ispublished="" created_at="" updated_at=""/>
+<ROW id="2" name="Homepage" ispublished="" created_at="" updated_at=""/>
+<ROW id="3" name="Right" ispublished="" created_at="" updated_at=""/>
+<ROW id="4" name="Bottom" ispublished="" created_at="" updated_at=""/>
+<ROW id="5" name="Homepage Popup" ispublished="" created_at="" updated_at=""/>
+</ROWDATA>
+</DATAPACKET>

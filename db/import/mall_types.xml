@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="introtext" DisplayLabel="introtext" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="description" DisplayLabel="description" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Major Shopping Mall" introtext="Shopping Mall" description="" ispublished="False" created_at="2013-04-21 14:15:46" updated_at="2013-04-21 14:15:46"/>
+<ROW id="2" name="Plaza Mall" introtext="Plaza Mall" description="" ispublished="False" created_at="2013-04-21 14:16:14" updated_at="2013-04-21 14:16:14"/>
+<ROW id="3" name="Retail park" introtext="Retail park" description="for a grouping of retail stores, usually the equivalent of a power center." ispublished="False" created_at="2013-05-24 11:04:02" updated_at="2013-05-24 11:04:02"/>
+<ROW id="4" name="a" introtext="a" description="a" ispublished="False" created_at="2013-05-24 11:10:08" updated_at="2013-05-24 11:10:08"/>
+</ROWDATA>
+</DATAPACKET>

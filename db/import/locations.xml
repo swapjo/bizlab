@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="address" DisplayLabel="address" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="latitude" DisplayLabel="latitude" FieldType="Float" FieldClass="TField"/>
+<FIELD FieldName="longitude" DisplayLabel="longitude" FieldType="Float" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" address="Statue of Liberty" latitude="" longitude="" created_at="2013-07-06 10:29:58" updated_at="2013-07-06 10:29:58"/>
+<ROW id="2" address="Statue of Liberty" latitude="" longitude="" created_at="2013-07-06 10:32:17" updated_at="2013-07-06 10:32:17"/>
+<ROW id="3" address="Statue of Liberty" latitude="" longitude="" created_at="2013-07-06 10:33:58" updated_at="2013-07-06 10:33:58"/>
+</ROWDATA>
+</DATAPACKET>

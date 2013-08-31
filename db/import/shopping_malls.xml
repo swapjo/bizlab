@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="description" DisplayLabel="description" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="mall_type_id" DisplayLabel="mall_type_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="image" DisplayLabel="image" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="address_id" DisplayLabel="address_id" FieldType="Integer" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Eaton Centre" description="Eaton Centre" mall_type_id="1" ispublished="False" created_at="2013-04-19 14:00:10" updated_at="2013-04-21 14:20:14" image="shoping_mall.jpg" address_id="16"/>
+<ROW id="2" name="Mark value" description="" mall_type_id="2" ispublished="False" created_at="2013-04-19 14:00:33" updated_at="2013-04-21 14:22:25" image="mark_value.jpg" address_id="12"/>
+<ROW id="3" name="Iranian Plaza" description="" mall_type_id="2" ispublished="False" created_at="2013-04-19 14:00:55" updated_at="2013-04-21 14:24:40" image="Iranian_Plaza.jpg" address_id="13"/>
+<ROW id="6" name="Relience" description="" mall_type_id="2" ispublished="False" created_at="2013-04-19 14:02:37" updated_at="2013-04-21 14:26:07" image="reliance_cananda.jpg" address_id="14"/>
+<ROW id="7" name="Fairview Mall" description="Fairview Mall is a major shopping centre in Toronto, Ontario, Canada of about 80,000 m² (900,000 ft2), located at the northeast corner of Don Mills Road and Sheppard Avenue East in the former borough of North York. In early 2009 it was jointly owned by Cadillac Fairview (50%) and Ivanhoe Cambridge (50%), two of Canada's largest real estate property managers and developers." mall_type_id="2" ispublished="False" created_at="2013-05-24 11:29:07" updated_at="2013-05-24 11:32:50" image="fairview.jpeg" address_id="6"/>
+<ROW id="8" name="Scarborough Town Centre" description="The Scarborough Town Centre is a shopping mall in the Scarborough district of Toronto, Ontario, Canada. Central to the Scarborough City Centre, it is adjacent to the Scarborough Centre RT station and Scarborough Centre Bus Terminal.[2] It was constructed by Oxford Properties and opened in 1973 to become the ninth largest shopping mall in Canada, fifth largest in Ontario and third in Toronto by retail space, making it one of the five major shopping malls in Toronto." mall_type_id="1" ispublished="False" created_at="2013-05-24 11:32:03" updated_at="2013-05-24 11:32:21" image="scarborough_town_centre_balloons4.jpg" address_id="17"/>
+<ROW id="9" name="Sherway Gardens" description="Sherway Gardens is an upscale shopping mall originally built in 1971 in the west end area of Toronto known as Etobicoke.The mall's original structure covered 850,000 square feet (79,000 m2) and contained 127 stores. Sherway Gardens was subsequently expanded to 972,540 square feet (90,352 m2) with 215 stores, becoming the eighth largest mall in the Greater Toronto Area. It is a terminus for several Toronto Transit Commission and MiWay bus routes." mall_type_id="2" ispublished="False" created_at="2013-05-24 11:34:23" updated_at="2013-05-24 11:35:41" image="200px-Sherway_Gardens_Entrance_7.jpg" address_id="9"/>
+</ROWDATA>
+</DATAPACKET>

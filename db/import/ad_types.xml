@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Group Buys" created_at="" updated_at=""/>
+<ROW id="2" name="Coupons" created_at="" updated_at=""/>
+<ROW id="3" name="Flyers" created_at="" updated_at=""/>
+<ROW id="4" name="Sales &amp; Deals" created_at="" updated_at=""/>
+<ROW id="5" name="Others" created_at="" updated_at=""/>
+</ROWDATA>
+</DATAPACKET>

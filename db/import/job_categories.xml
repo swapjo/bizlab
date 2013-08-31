@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="introtext" DisplayLabel="introtext" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="description" DisplayLabel="description" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="parent_category_id" DisplayLabel="parent_category_id" FieldType="Integer" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Finance" introtext="Account &amp; Finance" description="Jobs in categories of accounts and finance" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="2" name="Marketing" introtext="Marketing Management" description="Jobs in marketing related profiles" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="3" name="Customer Support" introtext="Customer care and support" description="Jobs in Customer care and support domain" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="4" name="HR" introtext="Human Resources" description="Human Resources and Recruitment functioning" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="5" name="Management" introtext="Management" description="Management and executive profiles" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="6" name="Media" introtext="Media" description="Jobs for advertising media, media-planning Jobs etc." ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="7" name="Customer Service/ BPO/ KPO" introtext="Customer Service/ BPO/ KPO" description="Jobs in BPO, KPO, Customer Service etc." ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="8" name="Insurance" introtext="Insurance" description="Jos in Insurance" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="9" name="Agriculture" introtext="Agriculture" description="Jobs in Agriculture" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="10" name="Automobile" introtext="Automobile" description="Jobs in Automobile" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="11" name="Aviation" introtext="Aviation" description="Jobs in Aviation" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="12" name="Brewery" introtext="Brewery" description="Jobs in Brewery" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="14" name="Information Technology" introtext="Information Technology" description="Jobs in Information Technology" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+</ROWDATA>
+</DATAPACKET>

@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="name" DisplayLabel="name" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="introtext" DisplayLabel="introtext" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="description" DisplayLabel="description" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="parent_category_id" DisplayLabel="parent_category_id" FieldType="Integer" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" name="Software" introtext="hello" description="sofware and IT" ispublished="False" created_at="2013-04-21 14:08:05" updated_at="2013-04-21 14:08:05" parent_category_id=""/>
+<ROW id="2" name="Order management" introtext="" description="" ispublished="False" created_at="2013-04-21 14:08:46" updated_at="2013-04-21 14:09:20" parent_category_id="1"/>
+<ROW id="3" name="Books" introtext="Buy books online" description="-Academic and Professional
+-Arts, Photography and Design
+-Business, Investing and Management
+-Children
+-Cooking, Food &amp; Wine etc..." ispublished="False" created_at="2013-06-06 09:40:16" updated_at="2013-06-06 09:44:41" parent_category_id="1"/>
+<ROW id="4" name="Apparel, Clothing &amp; Garments" introtext="Apparel, Clothing &amp; Garments" description="-Cotton, Denim, Polyester &amp; Other Fabric Clothing
+-Fabrics &amp; Textiles
+-Fashion Scarves, Woolen Scarves &amp; Stoles
+-Stocklot Garments, Ready to Ship Garments &amp; Apparels etc..." ispublished="False" created_at="2013-06-06 09:43:57" updated_at="2013-06-06 09:45:09" parent_category_id="1"/>
+<ROW id="5" name="Footwear" introtext="Mens, Womens &amp; Kids Footwear" description="-Mens, Womens &amp; Kids Footwear
+-Shoes Accessories, Shoe Parts &amp; Raw Material
+-Special Purpose Footwear for Safety, Military &amp; Other Purposes
+-Sports Footwear, Accessories &amp; Related Products etc..." ispublished="False" created_at="2013-06-06 09:47:21" updated_at="2013-06-06 09:47:21" parent_category_id="4"/>
+<ROW id="6" name="Women" introtext="Footwear for womens " description="Footwear for womens " ispublished="False" created_at="2013-06-06 09:49:24" updated_at="2013-06-06 09:49:24" parent_category_id="5"/>
+<ROW id="7" name="Men" introtext="Footwear for men " description="Footwear for men " ispublished="False" created_at="2013-06-06 09:50:27" updated_at="2013-06-06 09:50:27" parent_category_id="5"/>
+<ROW id="8" name="Sandals" introtext="Sandals" description="Sandals" ispublished="False" created_at="2013-06-06 09:51:26" updated_at="2013-06-06 09:51:26" parent_category_id="6"/>
+<ROW id="9" name="Slippers &amp; Flip Flops" introtext="Slippers &amp; Flip Flops" description="Slippers &amp; Flip Flops" ispublished="False" created_at="2013-06-06 09:51:57" updated_at="2013-06-06 09:51:57" parent_category_id="6"/>
+<ROW id="10" name="Casual Shoes" introtext="Casual Shoes" description="Casual Shoes" ispublished="False" created_at="2013-06-06 09:52:28" updated_at="2013-06-06 09:52:28" parent_category_id="6"/>
+<ROW id="11" name="Peep Toes" introtext="Peep Toes" description="Peep Toes" ispublished="False" created_at="2013-06-06 09:53:49" updated_at="2013-06-06 09:53:49" parent_category_id="1"/>
+<ROW id="12" name="Casual Shoes" introtext="Casual Shoes" description="Casual Shoes" ispublished="False" created_at="2013-06-06 09:56:16" updated_at="2013-06-06 09:56:16" parent_category_id="7"/>
+<ROW id="13" name="Formal Shoes" introtext="Formal Shoes" description="Formal Shoes" ispublished="False" created_at="2013-06-06 09:56:53" updated_at="2013-06-06 09:56:53" parent_category_id="7"/>
+<ROW id="14" name="Slippers &amp; Flip Flops" introtext="Slippers &amp; Flip Flops" description="Slippers &amp; Flip Flops" ispublished="False" created_at="2013-06-06 09:57:31" updated_at="2013-06-06 09:57:31" parent_category_id="7"/>
+<ROW id="15" name="Building &amp; Construction" introtext="Building &amp; Construction" description="Building &amp; Construction" ispublished="False" created_at="2013-06-06 09:59:33" updated_at="2013-06-06 09:59:33" parent_category_id="1"/>
+<ROW id="16" name="" introtext="" description="" ispublished="" created_at="" updated_at="" parent_category_id=""/>
+<ROW id="17" name="Bathroom Fittings" introtext="Bathroom Fittings" description="Bathroom Fittings" ispublished="False" created_at="2013-06-06 10:02:41" updated_at="2013-06-06 10:02:41" parent_category_id="15"/>
+<ROW id="18" name="Construction Machinery" introtext="Construction Machinery" description="Construction Machinery" ispublished="False" created_at="2013-06-06 10:03:12" updated_at="2013-06-06 10:03:12" parent_category_id="15"/>
+<ROW id="19" name="Medical &amp; Hospital" introtext="Medical &amp; Hospital" description="Medical &amp; Hospital" ispublished="False" created_at="2013-06-06 10:04:30" updated_at="2013-06-06 10:04:30" parent_category_id="16"/>
+<ROW id="20" name="Active Ingredients" introtext="Active Ingredients" description="Active Ingredients" ispublished="False" created_at="2013-06-06 10:06:15" updated_at="2013-06-06 10:06:15" parent_category_id="19"/>
+<ROW id="21" name="Food &amp; Beverages" introtext="Food &amp; Beverages" description="Food &amp; Beverages" ispublished="False" created_at="2013-06-06 10:08:16" updated_at="2013-06-06 10:08:16" parent_category_id="16"/>
+<ROW id="22" name="Milk &amp; Dairy Products" introtext="Milk &amp; Dairy Products" description="Milk &amp; Dairy Products" ispublished="False" created_at="2013-06-06 10:09:18" updated_at="2013-06-06 10:09:18" parent_category_id="21"/>
+<ROW id="23" name="Furniture Manufacturers" introtext="Furniture Manufacturers" description="Furniture Manufacturers" ispublished="False" created_at="2013-06-06 10:11:02" updated_at="2013-06-06 10:11:02" parent_category_id="16"/>
+<ROW id="24" name="Bathroom Cabinets, Bath Vanities, Lighting &amp; Bathroom Furniture" introtext="Bathroom Cabinets, Bath Vanities, Lighting &amp; Bathroom Furniture" description="Bathroom Cabinets, Bath Vanities, Lighting &amp; Bathroom Furniture" ispublished="False" created_at="2013-06-06 10:11:46" updated_at="2013-06-06 10:11:46" parent_category_id="16"/>
+<ROW id="25" name="Metals &amp; Minerals" introtext="Metals &amp; Minerals" description="Metals &amp; Minerals" ispublished="False" created_at="2013-06-07 09:04:42" updated_at="2013-06-07 09:04:42" parent_category_id="16"/>
+<ROW id="26" name="Abrasives, Abrasive Grain, Abrasive Tools &amp; Allied Products" introtext="Abrasives, Abrasive Grain, Abrasive Tools &amp; Allied Products" description="Abrasives, Abrasive Grain, Abrasive Tools &amp; Allied Products" ispublished="False" created_at="2013-06-07 09:05:42" updated_at="2013-06-07 09:05:42" parent_category_id="25"/>
+</ROWDATA>
+</DATAPACKET>

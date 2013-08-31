@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="title" DisplayLabel="title" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="description" DisplayLabel="description" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="vacancy_count" DisplayLabel="vacancy_count" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="company_id" DisplayLabel="company_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="qualification" DisplayLabel="qualification" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="job_categiory_id" DisplayLabel="job_categiory_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="meeting_address" DisplayLabel="meeting_address" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="expiry_date" DisplayLabel="expiry_date" FieldType="Date" FieldClass="TField"/>
+<FIELD FieldName="ispublished" DisplayLabel="ispublished" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="isapproved" DisplayLabel="isapproved" FieldType="Boolean" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="image" DisplayLabel="image" FieldType="String" FieldClass="TField"/>
+<FIELD FieldName="user_id" DisplayLabel="user_id" FieldType="Integer" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" title="Account Manager" description="Senior account manager" vacancy_count="2" company_id="1" qualification="Chartered Accountant" job_categiory_id="1" meeting_address="4, Palm Heights, Moledina Road, Pune" expiry_date="05/15/2013" ispublished="" isapproved="" created_at="2013-05-15 16:25:04" updated_at="2013-05-15 16:25:04" image="Lighthouse.jpg" user_id="1"/>
+<ROW id="2" title="Senior Clerk" description="Senior Clerks needed for payroll department" vacancy_count="4" company_id="1" qualification="Commerce gradutes" job_categiory_id="1" meeting_address="1" expiry_date="" ispublished="" isapproved="" created_at="" updated_at="" image="" user_id="1"/>
+<ROW id="3" title="Head Clerk" description="Supervisor Clerks needed for voucher management" vacancy_count="4" company_id="1" qualification="Commerce gradutes" job_categiory_id="1" meeting_address="1" expiry_date="" ispublished="" isapproved="" created_at="" updated_at="" image="" user_id="1"/>
+<ROW id="4" title="Software Developer" description="Java Developer for fast growing" vacancy_count="10" company_id="2" qualification="MCA, B.Sc, B.tech" job_categiory_id="1" meeting_address="" expiry_date="" ispublished="" isapproved="" created_at="" updated_at="" image="" user_id="1"/>
+</ROWDATA>
+</DATAPACKET>

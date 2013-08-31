@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<DATAPACKET Version="2.0">
+<METADATA>
+<FIELDS>
+<FIELD FieldName="id" DisplayLabel="id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="ad_id" DisplayLabel="ad_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="user_id" DisplayLabel="user_id" FieldType="Integer" FieldClass="TField"/>
+<FIELD FieldName="created_at" DisplayLabel="created_at" FieldType="DateTime" FieldClass="TField"/>
+<FIELD FieldName="updated_at" DisplayLabel="updated_at" FieldType="DateTime" FieldClass="TField"/>
+</FIELDS>
+</METADATA>
+<ROWDATA>
+<ROW id="1" ad_id="1" user_id="4" created_at="" updated_at=""/>
+<ROW id="2" ad_id="2" user_id="4" created_at="" updated_at=""/>
+<ROW id="3" ad_id="4" user_id="4" created_at="" updated_at=""/>
+<ROW id="4" ad_id="11" user_id="4" created_at="" updated_at=""/>
+</ROWDATA>
+</DATAPACKET>
