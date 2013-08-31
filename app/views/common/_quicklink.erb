@@ -1,0 +1,10 @@
+<div class="span3" style="background-color:#0000ee">
+  <span class="secondary label" style="position: center;background-color:#ffffff; color:#003871; font-family: Copperplate Gothic; font-size:large">Quick Links</span>
+</div>
+<br/>
+
+<% @ad_categories = AdCategory.get_all_main_categories
+   @ad_categories.each do |ad_category| %>
+    <%= link_to ad_category.name , ads_path(:ad_category_id => ad_category.id), :class=>"tiny-12 columns tiny button secondary", :style => {:width=>"100%", :background_color=>"#74ad5a"} %>
+<% end %>
+
