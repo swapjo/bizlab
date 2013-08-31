@@ -1,0 +1,2 @@
+module BusinessItemCategoriesHelper
+end

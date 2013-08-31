@@ -1,0 +1,49 @@
+<h1>Listing ads</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Ad category</th>
+    <th>Price</th>
+    <th>Address</th>
+    <th>Company</th>
+    <th>Shopping mall</th>
+    <th>Ad position</th>
+    <th>Ispublished</th>
+    <th>Isapproved</th>
+    <th>Expiry date</th>
+    <th>User</th>
+    <th>Image</th>
+    <th>Ad type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ads.each do |ad| %>
+  <tr>
+    <td><%= ad.title %></td>
+    <td><%= ad.description %></td>
+    <td><%= ad.ad_category_id %></td>
+    <td><%= ad.price %></td>
+    <td><%= ad.address_id %></td>
+    <td><%= ad.company_id %></td>
+    <td><%= ad.shopping_mall_id %></td>
+    <td><%= ad.ad_position_id %></td>
+    <td><%= ad.ispublished %></td>
+    <td><%= ad.isapproved %></td>
+    <td><%= ad.expiry_date %></td>
+    <td><%= ad.user_id %></td>
+    <td><%= ad.image %></td>
+    <td><%= ad.ad_type_id %></td>
+    <td><%= link_to 'Show', ad %></td>
+    <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
+    <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad', new_ad_path %>

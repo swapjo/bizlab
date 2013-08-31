@@ -1,0 +1,20 @@
+rails generate scaffold AdCategory name:string introtext:string description:text ispublished:boolean   image:string parent_category_id:integer
+rails generate scaffold AdPosition name:string ispublished:boolean  
+rails generate scaffold AdType name:string  
+rails generate scaffold Address contact_name:string email:string phone:string fax:string address_line_one:string address_line_two:string postal_code:string city:string country:string website:string google_map_code:string chat_code:string ispublished:boolean   user_id:integer street:string latitude:float longitude:float gmaps:boolean
+rails generate scaffold Ad title:string description:text ad_category_id:integer price:decimal address_id:integer company_id:integer shopping_mall_id:integer ad_position_id:integer ispublished:boolean isapproved:boolean expiry_date:date   user_id:integer image:string ad_type_id:integer
+rails generate scaffold BookmarkAd ad_id:integer user_id:integer  
+rails generate scaffold BookmarkBusinessItem business_item_id:integer user_id:integer  
+rails generate scaffold BookmarkJob job_id:integer user_id:integer  
+rails generate scaffold BusinessItemCategory name:string introtext:string description:text ispublished:boolean   parent_category_id:integer
+rails generate scaffold BusinessItem title:text business_item_category_id:integer company_id:integer shopping_mall_id:integer address_id:integer ispublished:boolean isapproved:boolean expiry_date:date   image:string user_id:integer
+rails generate scaffold CityServiceCategory name:string introtext:string description:text ispublished:boolean   parent_category_id:integer
+rails generate scaffold CityService title:string description:text city_service_category_id:integer ispublished:boolean   image:string
+rails generate scaffold Company name:string owner_name:string user_id:integer info:string description:text phone:string fax:string email:string ispublished:boolean isapproved:boolean   image:string address_id:integer
+rails generate scaffold EmergencyNumber name:string value:string priority:integer ispublished:boolean   image:string
+rails generate scaffold JobCategory name:string introtext:string description:text ispublished:boolean   parent_category_id:integer
+rails generate scaffold Job title:string description:text vacancy_count:integer company_id:integer qualification:text job_categiory_id:integer meeting_address:text expiry_date:date ispublished:boolean isapproved:boolean   image:string user_id:integer
+rails generate scaffold MallType name:string introtext:string description:text ispublished:boolean  
+rails generate scaffold ShoppingMall name:string description:text mall_type_id:integer ispublished:boolean   image:string address_id:integer
+
+rails generate scaffold Location address:string latitude:float longitude:float  

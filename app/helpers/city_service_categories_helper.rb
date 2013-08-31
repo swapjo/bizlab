@@ -1,0 +1,2 @@
+module CityServiceCategoriesHelper
+end

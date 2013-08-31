@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  ad_category_id: 1
+  price: 9.99
+  address_id: 1
+  company_id: 1
+  shopping_mall_id: 1
+  ad_position_id: 1
+  ispublished: false
+  isapproved: false
+  expiry_date: 2013-08-31
+  user_id: 1
+  image: MyString
+  ad_type_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  ad_category_id: 1
+  price: 9.99
+  address_id: 1
+  company_id: 1
+  shopping_mall_id: 1
+  ad_position_id: 1
+  ispublished: false
+  isapproved: false
+  expiry_date: 2013-08-31
+  user_id: 1
+  image: MyString
+  ad_type_id: 1

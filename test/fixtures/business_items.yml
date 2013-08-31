@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyText
+  business_item_category_id: 1
+  company_id: 1
+  shopping_mall_id: 1
+  address_id: 1
+  ispublished: false
+  isapproved: false
+  expiry_date: 2013-08-31
+  image: MyString
+  user_id: 1
+
+two:
+  title: MyText
+  business_item_category_id: 1
+  company_id: 1
+  shopping_mall_id: 1
+  address_id: 1
+  ispublished: false
+  isapproved: false
+  expiry_date: 2013-08-31
+  image: MyString
+  user_id: 1

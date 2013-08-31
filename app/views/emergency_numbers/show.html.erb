@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @emergency_number.name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @emergency_number.value %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @emergency_number.priority %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @emergency_number.ispublished %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @emergency_number.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_emergency_number_path(@emergency_number) %> |
+<%= link_to 'Back', emergency_numbers_path %>

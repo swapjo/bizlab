@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ad_position.name %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @ad_position.ispublished %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_position_path(@ad_position) %> |
+<%= link_to 'Back', ad_positions_path %>

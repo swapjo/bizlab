@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Job:</b>
+  <%= @bookmark_job.job_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @bookmark_job.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookmark_job_path(@bookmark_job) %> |
+<%= link_to 'Back', bookmark_jobs_path %>

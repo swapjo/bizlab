@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @business_item_category.name %>
+</p>
+
+<p>
+  <b>Introtext:</b>
+  <%= @business_item_category.introtext %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @business_item_category.description %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @business_item_category.ispublished %>
+</p>
+
+<p>
+  <b>Parent category:</b>
+  <%= @business_item_category.parent_category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_item_category_path(@business_item_category) %> |
+<%= link_to 'Back', business_item_categories_path %>

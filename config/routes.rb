@@ -1,5 +1,59 @@
 Bizlab::Application.routes.draw do
 
+  resources :shopping_malls
+
+
+  resources :mall_types
+
+
+  resources :jobs
+
+
+  resources :job_categories
+
+
+  resources :emergency_numbers
+
+
+  resources :companies
+
+
+  resources :city_services
+
+
+  resources :city_service_categories
+
+
+  resources :business_items
+
+
+  resources :business_item_categories
+
+
+  resources :bookmark_jobs
+
+
+  resources :bookmark_business_items
+
+
+  resources :bookmark_ads
+
+
+  resources :ads
+
+
+  resources :addresses
+
+
+  resources :ad_types
+
+
+  resources :ad_positions
+
+
+  resources :ad_categories
+
+
   devise_for :users
 
   get "info/home"

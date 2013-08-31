@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Business item:</b>
+  <%= @bookmark_business_item.business_item_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @bookmark_business_item.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookmark_business_item_path(@bookmark_business_item) %> |
+<%= link_to 'Back', bookmark_business_items_path %>

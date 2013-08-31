@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @job.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job.description %>
+</p>
+
+<p>
+  <b>Vacancy count:</b>
+  <%= @job.vacancy_count %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @job.company_id %>
+</p>
+
+<p>
+  <b>Qualification:</b>
+  <%= @job.qualification %>
+</p>
+
+<p>
+  <b>Job categiory:</b>
+  <%= @job.job_categiory_id %>
+</p>
+
+<p>
+  <b>Meeting address:</b>
+  <%= @job.meeting_address %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @job.expiry_date %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @job.ispublished %>
+</p>
+
+<p>
+  <b>Isapproved:</b>
+  <%= @job.isapproved %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @job.image %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @job.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

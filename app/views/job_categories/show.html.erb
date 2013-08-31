@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @job_category.name %>
+</p>
+
+<p>
+  <b>Introtext:</b>
+  <%= @job_category.introtext %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job_category.description %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @job_category.ispublished %>
+</p>
+
+<p>
+  <b>Parent category:</b>
+  <%= @job_category.parent_category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_category_path(@job_category) %> |
+<%= link_to 'Back', job_categories_path %>

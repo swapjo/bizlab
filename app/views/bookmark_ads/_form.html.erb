@@ -1,0 +1,25 @@
+<%= form_for(@bookmark_ad) do |f| %>
+  <% if @bookmark_ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bookmark_ad.errors.count, "error") %> prohibited this bookmark_ad from being saved:</h2>
+
+      <ul>
+      <% @bookmark_ad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ad_id %><br />
+    <%= f.number_field :ad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mall_type.name %>
+</p>
+
+<p>
+  <b>Introtext:</b>
+  <%= @mall_type.introtext %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @mall_type.description %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @mall_type.ispublished %>
+</p>
+
+
+<%= link_to 'Edit', edit_mall_type_path(@mall_type) %> |
+<%= link_to 'Back', mall_types_path %>

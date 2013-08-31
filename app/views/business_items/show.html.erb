@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @business_item.title %>
+</p>
+
+<p>
+  <b>Business item category:</b>
+  <%= @business_item.business_item_category_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @business_item.company_id %>
+</p>
+
+<p>
+  <b>Shopping mall:</b>
+  <%= @business_item.shopping_mall_id %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @business_item.address_id %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @business_item.ispublished %>
+</p>
+
+<p>
+  <b>Isapproved:</b>
+  <%= @business_item.isapproved %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @business_item.expiry_date %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @business_item.image %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @business_item.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_item_path(@business_item) %> |
+<%= link_to 'Back', business_items_path %>

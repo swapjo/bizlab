@@ -1,0 +1,2 @@
+module BookmarkAdsHelper
+end

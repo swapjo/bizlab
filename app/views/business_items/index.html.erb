@@ -1,0 +1,41 @@
+<h1>Listing business_items</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Business item category</th>
+    <th>Company</th>
+    <th>Shopping mall</th>
+    <th>Address</th>
+    <th>Ispublished</th>
+    <th>Isapproved</th>
+    <th>Expiry date</th>
+    <th>Image</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @business_items.each do |business_item| %>
+  <tr>
+    <td><%= business_item.title %></td>
+    <td><%= business_item.business_item_category_id %></td>
+    <td><%= business_item.company_id %></td>
+    <td><%= business_item.shopping_mall_id %></td>
+    <td><%= business_item.address_id %></td>
+    <td><%= business_item.ispublished %></td>
+    <td><%= business_item.isapproved %></td>
+    <td><%= business_item.expiry_date %></td>
+    <td><%= business_item.image %></td>
+    <td><%= business_item.user_id %></td>
+    <td><%= link_to 'Show', business_item %></td>
+    <td><%= link_to 'Edit', edit_business_item_path(business_item) %></td>
+    <td><%= link_to 'Destroy', business_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Business item', new_business_item_path %>

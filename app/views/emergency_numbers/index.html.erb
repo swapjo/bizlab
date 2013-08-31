@@ -1,0 +1,31 @@
+<h1>Listing emergency_numbers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+    <th>Priority</th>
+    <th>Ispublished</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emergency_numbers.each do |emergency_number| %>
+  <tr>
+    <td><%= emergency_number.name %></td>
+    <td><%= emergency_number.value %></td>
+    <td><%= emergency_number.priority %></td>
+    <td><%= emergency_number.ispublished %></td>
+    <td><%= emergency_number.image %></td>
+    <td><%= link_to 'Show', emergency_number %></td>
+    <td><%= link_to 'Edit', edit_emergency_number_path(emergency_number) %></td>
+    <td><%= link_to 'Destroy', emergency_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Emergency number', new_emergency_number_path %>

@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @ad.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @ad.description %>
+</p>
+
+<p>
+  <b>Ad category:</b>
+  <%= @ad.ad_category_id %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @ad.price %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @ad.address_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @ad.company_id %>
+</p>
+
+<p>
+  <b>Shopping mall:</b>
+  <%= @ad.shopping_mall_id %>
+</p>
+
+<p>
+  <b>Ad position:</b>
+  <%= @ad.ad_position_id %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @ad.ispublished %>
+</p>
+
+<p>
+  <b>Isapproved:</b>
+  <%= @ad.isapproved %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @ad.expiry_date %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @ad.user_id %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @ad.image %>
+</p>
+
+<p>
+  <b>Ad type:</b>
+  <%= @ad.ad_type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

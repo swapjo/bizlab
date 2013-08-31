@@ -1,0 +1,33 @@
+<h1>Listing ad_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Introtext</th>
+    <th>Description</th>
+    <th>Ispublished</th>
+    <th>Image</th>
+    <th>Parent category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ad_categories.each do |ad_category| %>
+  <tr>
+    <td><%= ad_category.name %></td>
+    <td><%= ad_category.introtext %></td>
+    <td><%= ad_category.description %></td>
+    <td><%= ad_category.ispublished %></td>
+    <td><%= ad_category.image %></td>
+    <td><%= ad_category.parent_category_id %></td>
+    <td><%= link_to 'Show', ad_category %></td>
+    <td><%= link_to 'Edit', edit_ad_category_path(ad_category) %></td>
+    <td><%= link_to 'Destroy', ad_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad category', new_ad_category_path %>

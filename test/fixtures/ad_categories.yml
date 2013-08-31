@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  introtext: MyString
+  description: MyText
+  ispublished: false
+  image: MyString
+  parent_category_id: 1
+
+two:
+  name: MyString
+  introtext: MyString
+  description: MyText
+  ispublished: false
+  image: MyString
+  parent_category_id: 1

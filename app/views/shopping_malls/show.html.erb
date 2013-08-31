@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @shopping_mall.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @shopping_mall.description %>
+</p>
+
+<p>
+  <b>Mall type:</b>
+  <%= @shopping_mall.mall_type_id %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @shopping_mall.ispublished %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @shopping_mall.image %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @shopping_mall.address_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_shopping_mall_path(@shopping_mall) %> |
+<%= link_to 'Back', shopping_malls_path %>

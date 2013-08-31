@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @city_service.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @city_service.description %>
+</p>
+
+<p>
+  <b>City service category:</b>
+  <%= @city_service.city_service_category_id %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @city_service.ispublished %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @city_service.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_city_service_path(@city_service) %> |
+<%= link_to 'Back', city_services_path %>

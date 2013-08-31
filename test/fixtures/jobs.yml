@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  vacancy_count: 1
+  company_id: 1
+  qualification: MyText
+  job_categiory_id: 1
+  meeting_address: MyText
+  expiry_date: 2013-08-31
+  ispublished: false
+  isapproved: false
+  image: MyString
+  user_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  vacancy_count: 1
+  company_id: 1
+  qualification: MyText
+  job_categiory_id: 1
+  meeting_address: MyText
+  expiry_date: 2013-08-31
+  ispublished: false
+  isapproved: false
+  image: MyString
+  user_id: 1

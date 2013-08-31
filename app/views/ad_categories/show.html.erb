@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ad_category.name %>
+</p>
+
+<p>
+  <b>Introtext:</b>
+  <%= @ad_category.introtext %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @ad_category.description %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @ad_category.ispublished %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @ad_category.image %>
+</p>
+
+<p>
+  <b>Parent category:</b>
+  <%= @ad_category.parent_category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_category_path(@ad_category) %> |
+<%= link_to 'Back', ad_categories_path %>
