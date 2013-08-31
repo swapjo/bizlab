@@ -1,9 +1,23 @@
 class JobsController < ApplicationController
+
+  require 'will_paginate/array'
+
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
-
+    #@jobs = Job.all
+    @jobs = Job.search(params[:search])
+    if params.has_key?(:job_category_id) && params[:job_category_id] != ''
+      @jobs = @jobs.where(' job_category_id = ?', "#{params[:job_category_id]}")
+    end
+    if params.has_key?(:company_id) && params[:company_id] != ''
+      @jobs = @jobs.where(' company_id = ?', "#{params[:company_id]}")
+    end
+    if params.has_key?(:company_name) && params[:company_name] != ''
+      companies = Company.search(params[:company_name]).all(:select => :id).collect(&:id)
+      @jobs = @jobs.where("company_id IN (#{companies.join(',')} )")
+    end
+    @jobs = @jobs.shuffle().paginate(:per_page => 6, :page => params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @jobs }
@@ -41,6 +55,7 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(params[:job])
+    @job.user_id = current_user.id
 
     respond_to do |format|
       if @job.save

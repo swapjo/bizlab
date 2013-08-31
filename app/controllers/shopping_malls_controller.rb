@@ -2,7 +2,13 @@ class ShoppingMallsController < ApplicationController
   # GET /shopping_malls
   # GET /shopping_malls.json
   def index
-    @shopping_malls = ShoppingMall.all
+    #@shopping_malls = ShoppingMall.all
+    @shopping_malls = ShoppingMall.search(params[:search])
+    if params.has_key?(:city) && params[:city] != ''
+      @city=params[:city]
+      addresses = Address.where(" city like '%#{@city}%'").all(:select => :id).collect(&:id)
+      @shopping_malls = @shopping_malls.where("address_id IN (#{addresses.join(',')} )")
+    end
 
     respond_to do |format|
       format.html # index.html.erb

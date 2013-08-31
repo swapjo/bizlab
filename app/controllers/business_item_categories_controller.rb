@@ -2,7 +2,8 @@ class BusinessItemCategoriesController < ApplicationController
   # GET /business_item_categories
   # GET /business_item_categories.json
   def index
-    @business_item_categories = BusinessItemCategory.all
+    #@business_item_categories = BusinessItemCategory.all
+    @business_item_categories = BusinessItemCategory.where("name LIKE ?", "#{params[:char]}%")
 
     respond_to do |format|
       format.html # index.html.erb
