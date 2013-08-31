@@ -1,25 +1,3 @@
-<div class="row-fluid">
-  <div class="span2">
-    <div class="btn-group">
-      <a href="#"><img src="/images/facebook.png" alt="Facebook"/></a>
-      <a href="#"><img src="/images/twitter.png" alt="Twitter"/></a>
-      <a href="#"><img src="/images/linkedin.png" alt="Linkedin"/></a>
-      <a href="#"><img src="/images/technorati.png" alt="Technorati"/></a>
-      <a href="#"><img src="/images/myspace.png" alt="Myspace"/></a>
-    </div>
-  </div>
-  <div class="span2 text-left" style="font-size:12px; color:#fffff; ">
-    <%= render :partial => "common/city_selection" %>
-  </div>
-  <div class="span3 text-centre" >
-    <%= link_to "View All Categories","/info/business_page_1", :style=>"font-size:12px; color:#fffff; text-decoration: underline "%>
-    <span style="text-decoration: none">--</span>
-    <%= link_to "More Search Options","/info/business_page_1", :style=>"font-size:12px; color:#fffff; text-decoration: underline "%>
-  </div>
-  <div class="span2 text-centre" style="font-size:12px; color:#fffff;" >
-    <%= render :partial => "common/ethnic_selection" %>
-  </div>
-  <div class="span2 pull-right">
-    <%= render :partial => "common/login_control" %>
-  </div>
-</div>
+<%= render :partial => "common/top_bar" %>
+<%= render :partial => "common/title_search_bar" %>
+<%= render :partial => "common/navigator_sub" %>
