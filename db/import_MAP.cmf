@@ -1,0 +1,11 @@
+<columns>
+  <column name="id" map=""/>
+  <column name="name" map=""/>
+  <column name="introtext" map=""/>
+  <column name="description" map=""/>
+  <column name="ispublished" map=""/>
+  <column name="image" map=""/>
+  <column name="parent_category_id" map=""/>
+  <column name="created_at" map=""/>
+  <column name="updated_at" map=""/>
+</columns>
