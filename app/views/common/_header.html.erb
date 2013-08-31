@@ -4,28 +4,7 @@
       <a href="#"><img src="/images/facebook.png" alt="Facebook"/></a>
       <a href="#"><img src="/images/twitter.png" alt="Twitter"/></a>
       <a href="#"><img src="/images/linkedin.png" alt="Linkedin"/></a>
-      <button class="btn" type="button">City</button>
-      <div class="dropdown">
-        <!-- Link or button to toggle dropdown -->
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brampton</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ontario</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Vancover</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Winnipeg</a></li>
-        </ul>
-      </div>
-
-      <!--<div class="dropdown">-->
-      <!--<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">-->
-      <!--City<b class="caret"></b>-->
-      <!--</a>-->
-      <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
-      <!--<li role="presentation"><a href="#" tabindex="-1" role="menuitem">Brampton</a></li>-->
-      <!--<li role="presentation"><a href="#" tabindex="-1" role="menuitem">Ontario</a></li>-->
-      <!--<li role="presentation"><a href="#" tabindex="-1" role="menuitem">Vancover</a></li>-->
-      <!--<li role="presentation"><a href="#" tabindex="-1" role="menuitem">Winnipeg</a></li>-->
-      <!--</ul>-->
-      <!--</div>-->
+      <button class="btn" type="button"></button>
     </div>
     <!--<script type="text/javascript" src="jquery-latest.js"></script>-->
     <!--<script type="text/javascript" src="bootstrap.js"></script>-->
@@ -36,108 +15,8 @@
     <!--</script>-->
 
     <%= link_to "View All Categories","/info/business_page_1", :style=>"font-size:10px; color:#fffff" %>
-    <ul id="languages" class="f-dropdown content" data-dropdown-content="" style="position: absolute; top: 1302.59375px; left: -99999px;">
-      <li><a href="#">English</a></li>
-      <li><a href="#">Spanish</a></li>
-      <li><a href="#">French</a></li>
-    </ul>
-    <a href="#" data-dropdown="languages" class="tiny button dropdown">Language</a>
-    <% if user_signed_in? %>
-        <div class="btn-group">
-          <%= current_user.name %>
-          <% if current_user.role.name == "admin" %>
-              <li><%= link_to "Control Panel", "/admin" %></li>
-          <% else %>
-              <li><%= link_to "My Account", "/info/user_home" %></li>
-          <% end %>
-          <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
-        </div>
-    <% else %>
-        <div class="btn-group">
-          <a href="#loginModal" role="button" class="btn" data-toggle="modal" style="font-size:10x">Log In</a>
-          <a href="#registerModal" role="button" class="btn" data-toggle="modal" style="font-size:10x">Register</a>
-        </div>
-    <% end %>
-    <!-- loginModal Modal -->
-    <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Log In</h3>
-      </div>
-      <%= form_for("user", :url => user_session_path) do |f| %>
-          <div class="modal-body">
-            <div class="row-fluid">
-              <div class="span3">
-                <%= f.label :email %>
-              </div>
-              <div class="span9">
-                <%= f.email_field :email, :autofocus => true %>
-              </div>
-            </div>
-            <div class="row-fluid">
-              <div class="span3">
-                <%= f.label :role_id %>
-              </div>
-              <div class="span9">
-                <%=collection_select(:user, :role_id, Role.all, :id, :name  ) %>
-              </div>
-            </div>
-            <div class="row-fluid">
-              <div class="span3">
-                <%= f.label :password %>
-              </div>
-              <div class="span9">
-                <%= f.password_field :password %>
 
-              </div>
-            </div>
-            <div class="row-fluid">
-              <div class="span1">
-                <%= f.check_box :remember_me %>  <%= f.label :remember_me %>
-              </div>
-              <div class="span10">
 
-              </div>
-            </div>
-            <%= link_to "Forgot your password?", new_password_path('user') ,:class=>"secondary button" ,:style => {:background_color=>"#0000ff"}  %>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-        <button type="submit" class="btn btn-primary">Log In</button>
-      </div>
-      <% end %>
-    </div>
-    <div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Please register</h3>
-      </div>
-      <div class="modal-body">
-        <%= form_for("user", :url => user_registration_path) do |f| %>
-            <div><%= f.label :email %>
-              <%= f.email_field :email, :autofocus => true %></div>
-            <div><%= f.label :name %>
-              <%= f.text_field :name %>
-            </div>
-            <div><%= f.label :role_id %>
-              <%=collection_select(:user, :role_id, Role.all, :id, :name  ) %>
-            </div>
-            <div><%= f.label :password %>
-              <%= f.password_field :password %></div>
-            <div>
-              <%= f.label :password_confirmation %>
-              <%= f.password_field :password_confirmation %>
-            </div>
-            <div>
-              <a href="#" class="secondary button" >Register</a>
-            </div>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-        <button class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
 
   </div>
 <!--        AAAAAAAAAAAA -->
