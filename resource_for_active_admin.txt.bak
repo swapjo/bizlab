@@ -1,0 +1,22 @@
+rails generate scaffold AdCategory
+rails generate scaffold AdPosition
+rails generate scaffold AdType 
+rails generate scaffold Address
+rails generate scaffold Ad 
+rails generate scaffold BookmarkAd 
+rails generate scaffold BookmarkBusinessItem 
+rails generate scaffold BookmarkJob 
+rails generate scaffold BusinessItemCategory 
+rails generate scaffold BusinessItem 
+rails generate scaffold CityServiceCategory 
+rails generate scaffold CityService 
+rails generate scaffold Company 
+rails generate scaffold EmergencyNumber 
+rails generate scaffold JobCategory 
+rails generate scaffold Job 
+rails generate scaffold MallType 
+rails generate scaffold ShoppingMall 
+
+rails generate scaffold Location 
+
+rails g active_admin:resource product

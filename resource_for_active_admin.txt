@@ -1,0 +1,21 @@
+rails g active_admin:resource AdCategory
+rails g active_admin:resource AdPosition
+rails g active_admin:resource AdType 
+rails g active_admin:resource Address
+rails g active_admin:resource Ad 
+rails g active_admin:resource BookmarkAd 
+rails g active_admin:resource BookmarkBusinessItem 
+rails g active_admin:resource BookmarkJob 
+rails g active_admin:resource BusinessItemCategory 
+rails g active_admin:resource BusinessItem 
+rails g active_admin:resource CityServiceCategory 
+rails g active_admin:resource CityService 
+rails g active_admin:resource Company 
+rails g active_admin:resource EmergencyNumber 
+rails g active_admin:resource JobCategory 
+rails g active_admin:resource Job 
+rails g active_admin:resource MallType 
+rails g active_admin:resource ShoppingMall 
+
+rails g active_admin:resource Location 
+
